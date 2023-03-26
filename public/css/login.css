@@ -1,0 +1,101 @@
+.loginWrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.gLogin {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gLogin h1 {
+    /* color: #bbb6bb; */
+    margin-bottom: 40px;
+    color: #fc9a5d;
+    margin-top: -2px;
+}
+.card-login {
+    width: 30%;
+    height: 70%;
+    background: #141414;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+.card-login form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-login form label {
+    color: gainsboro;
+    margin-bottom: 5px;
+    font-size: 13pt;
+}
+.senhaLogin{
+    margin-top: 20px;
+}
+.card-login form input {
+    width: 60%;
+    border: 0px;
+    height: 50px;
+    border-radius: 15px;
+    color: gainsboro;
+    background: #686668;
+}
+.card-login form input::placeholder {
+    color: lightgray;
+}
+.buttonSubmit {
+    margin-top: 40px;
+    border: 0px;
+    width: 60%;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: #312e31;
+    font-size: 15pt;
+}
+.buttonSubmit:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+.loginWrapper video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+    position: fixed;
+    opacity: 50%;
+}
+.card-login span {
+    color: gainsboro;
+    text-align: center;
+    margin-top: 30px;
+}
+.card-login span a {
+    color: #fc9a5d;
+}
+.card-login span a:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+@media only screen and (max-width: 1000px) {
+    .card-login {
+        width: 90%;
+        height: auto;
+        padding: 50px 0px;
+    }
+    .card-login form input, .buttonSubmit {
+        width: 80%;
+    }
+}

@@ -1,0 +1,209 @@
+.videoFundo, video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+    z-index: -1;
+}
+.videoFundo {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.videoFundo h2, .videoFundo span {
+    z-index: 100;
+    color:#fabc96;
+    font-family: "GothamHTF-Book", sans-serif;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: animacao 2s forwards;
+    text-align: center;
+    margin: 0px 20px;
+}
+.videoFundo video {
+    opacity: 50%;
+}
+.box {
+    height: auto;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgb(59, 58, 59);
+    margin: 0px 5%;
+    font-size: 25pt;
+    text-align: center;
+    margin-top: 80px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box h2 {
+    color: #fc9a5d;
+}
+.box span {
+    font-size: 20pt;
+    color: gainsboro;
+}
+.infos .textImg img {
+    width: 45%;
+    margin-right: 3%;
+}
+.infos .textImg span {
+    width: 45%;
+    margin-left: 3%;
+}
+.textImg {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.videoFundo h2{
+    margin-top: -40px;
+}
+.videoFundo span {
+    color: bisque;
+}
+.box:last-child {
+    border-bottom: 0px;
+}
+.contatoForm form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 40px;
+}
+.contatoForm form button {
+    margin-top: 40px;
+    width: 50%;
+    margin-left: 25%;
+    height: 50px;
+    border-radius: 15px;
+    border: 0px;
+    background: #fc9a5d;
+    color: #141414;
+    font-size: 16pt;
+}
+.contatoForm form span {
+    font-size: 13pt;
+    color: rgb(235, 132, 132);
+    padding-top: 10px;
+}
+.contatoForm form button:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+.contatoForm {
+    width: 100%;
+    display: flex;
+}
+.infosContato {
+    width: 50%;
+    border-left: 1px solid rgb(59, 58, 59);
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.infosContato a:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+.contatoForm form label {
+    font-size: 14pt;
+    color: gainsboro;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.contatoForm form input, .contatoForm form textarea {
+    border-radius: 15px;
+    border: none;
+    background: rgb(223, 179, 112);
+    resize: none;
+}
+.contatoForm form .email {
+    height: 50px;
+}
+.contatoForm form .assunto {
+    height: 100px;
+}
+.contatoForm form .mensagem {
+    height: 200px;
+}
+.contatoForm form input::placeholder, .contatoForm form textarea::placeholder {
+    color: #252525;
+}
+.infosContato img {
+    width: 90%;
+}
+.perfis {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.perfil {
+    height: auto;
+    padding-bottom: 80px;
+}
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    box-shadow: 0px 0px 5px 2px #fc9a5d;
+}
+.infosPerfil h3 {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 25pt;
+    text-align: center;
+    color: #fc9a5d;
+}
+.perfil span {
+    font-size: 16pt;
+}
+@media only screen and (max-width: 800px) {
+    .contatoForm {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contatoForm form, .infosContato {
+        width: 90%;
+    }
+    .infosContato {
+        border: none;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .textImg {
+        flex-direction: column;
+    }
+    .infos .textImg span, .infos .textImg img {
+        width: 90%;
+    }
+    .infos .textImg span {
+        margin-top: 20px;
+    }
+    .videoFundo span {
+        margin-top: 90px;
+    }
+    .videoFundo h2 {
+        margin-top: 20px;
+    }
+    .videoFundo video {
+        height: 100vh;
+    }
+    .infosPerfil h3 {
+        margin-left: 0px;
+    }
+    .perfil {
+        padding-bottom: 50px;
+    }
+}
