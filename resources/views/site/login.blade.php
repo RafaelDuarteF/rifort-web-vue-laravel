@@ -1,9 +1,9 @@
 @extends('general.basic')
 @section('assets.css')
-    <link href="{{ asset('css/login.css')}}" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset($cssPath . 'login.css')}}" type="text/css" rel="stylesheet"/>
 @endsection
 @section('assets.js')
-    <script src="{{ asset('js/login.js')}}"></script>
+    <script src="{{ asset($jsPath . 'login.js')}}"></script>
 @endsection
 
 @section('header')
@@ -12,7 +12,7 @@
 @section('conteudo')
     <div class="loginWrapper">
         <video autoplay muted loop>
-            <source src="{{asset('assets/videos/fundo2.mp4')}}" type="video/mp4"/>
+            <source src="{{asset($videosPath . 'fundo2.mp4')}}" type="video/mp4"/>
         </video>
         <div class="gLogin">
             <div class="card-login">

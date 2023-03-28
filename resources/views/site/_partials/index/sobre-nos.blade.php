@@ -6,7 +6,7 @@
     </span>
     <div class="perfis">
         <div class="perfil" id="betsabePerfil">
-            <img alt="Betsabe Aparecida" src="{{ asset('assets/participantes/betsabe.jpg') }}"/>
+            <img alt="Betsabe Aparecida" src="{{ asset($participantesPath . 'betsabe.jpg') }}"/>
             <div class="infosPerfil">
                 <h3>Betsabe Aparecida Jorge Ylla</h3>
                 <span>Uma estudante em formação do curso de Desenvolvimento de Sistemas na ETEC SEBRAE.
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="perfil" id="gabrielLeal">
-            <img alt="Gabriel Leal" src="{{ asset('assets/participantes/isabella.jpg') }}"/>
+            <img alt="Gabriel Leal" src="{{ asset($participantesPath . 'isabella.jpg') }}"/>
             <div class="infosPerfil">
                 <h3>Gabriel Leal Bonfim</h3>
                 <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="perfil" id="isabellaPerfil">
-        <img alt="Isabella Freitas" src="{{ asset('assets/participantes/isabella.jpg') }}"/>
+        <img alt="Isabella Freitas" src="{{ asset($participantesPath . 'isabella.jpg') }}"/>
             <div class="infosPerfil">
                 <h3>Isabella Freitas Ribeiro</h3>
                 <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica
@@ -44,7 +44,7 @@
             </div class="infosPerfil">
         </div>
         <div class="perfil" id="marcosPerfil">
-            <img alt="Marcos Murilla" src="{{ asset('assets/participantes/marcos.jpg') }}"/>
+            <img alt="Marcos Murilla" src="{{ asset($participantesPath . 'marcos.jpg') }}"/>
             <div class="infosPerfil">
                 <h3>Marcos Vinicius Murilla</h3>
                 <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="perfil" id="rafaelPerfil">
-            <img alt="Rafael Duarte" src="{{ asset('assets/participantes/rafael.jpg') }}"/>
+            <img alt="Rafael Duarte" src="{{ asset($participantesPath . 'rafael.jpg') }}"/>
             <div class="infosPerfil">
                 <h3>Rafael Duarte de Freitas</h3>
                 <span>Possui uma paixão por tecnologia e programação desde seus 13 anos, quando já sabia a

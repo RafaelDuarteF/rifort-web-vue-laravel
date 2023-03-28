@@ -9,7 +9,8 @@ $(window).scroll(function() {
     }
 });
 $(document).ready(function() {
-    $(".sw").css("width", $(window).width());
+    $(".sw").css("width", window.screen.width - 8); 
+    // classe sw possui width do tamanho do monitor do usuário, menos 8px do scrollbar
      
     const sr = ScrollReveal();
     sr.reveal('body > *', { duration: 1000, easing: 'ease-in-out' });

@@ -17,6 +17,7 @@ class IndexController extends Controller
         $infosPag = [
             'titulo' => 'Inicial',
         ];
+        $infosPag = array_merge($infosPag, $this->getSitePath());
         return view('site.index', $infosPag);
     }
     public function enviarContato(Request $request)

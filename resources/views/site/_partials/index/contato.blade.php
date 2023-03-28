@@ -19,7 +19,7 @@
             <button type="submit">Enviar</button>
         </form>
         <div class="infosContato">
-            <img alt="RIFORT Bus" src="{{ asset('assets/arts/rifortB.png ')}}"/>
+            <img alt="RIFORT Bus" src="{{ asset($artsPath . 'rifortB.png ')}}"/>
             <!-- <span>E-Mail: <a>growebdevep@gmail.com</a></span> -->
         </div>
     </div>

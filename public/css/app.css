@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: #252525;
@@ -118,7 +118,7 @@ footer {
     height: 300px;
     width: 100%;
     margin-top: 30px;
-    background: #fc9a5d;
+    background: rgba(40, 40, 40);
 }
 @media only screen and (max-width: 800px) {
     .logoHeader img {
