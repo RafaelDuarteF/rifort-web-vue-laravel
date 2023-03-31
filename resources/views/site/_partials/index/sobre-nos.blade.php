@@ -11,7 +11,7 @@
                 <h3>Betsabe Aparecida Jorge Ylla</h3>
                 <span>Uma estudante em formação do curso de Desenvolvimento de Sistemas na ETEC SEBRAE.
                  Neste projeto, sua colaboração foi feita através da comunicação, no desenvolvimento do design,
-                 e participações e colaborações no levantamento das pesquisas.
+                 e participações e colaborações' no levantamento das pesquisas.
                 </span>
             </div>
         </div>
@@ -47,13 +47,11 @@
             <img alt="Marcos Murilla" src="{{ asset($participantesPath . 'marcos.jpg') }}"/>
             <div class="infosPerfil">
                 <h3>Marcos Vinicius Murilla</h3>
-                <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica
-                 e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
-                 pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
-                 sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica,
-                 permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou
-                 decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a
-                 softwares de editoração eletrônica como Aldus PageMaker.
+                <span>Estudante de Desenvolvimento de Sistemas na Etec Sebrae, Marcos Murilla acompanha o projeto,
+                 empenhando nas funções de edição, design, e criações de ideias. Trabalhou na criação de um projeto
+                 interdisciplinar, e constantemente busca novas experiencias.
+                 Apaixonado por fotografia, cinema e a própria edição dos mesmos, tem o sonho de algum dia ingressar
+                 em uma boa faculdade, e desenvolver mais projetos relacionados as suas paixões.
                 </span>
             </div>
         </div>

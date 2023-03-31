@@ -53,6 +53,9 @@
     width: 45%;
     margin-left: 3%;
 }
+.infos .textImg span a {
+    color: #fc9a5d;
+}
 .textImg {
     display: flex;
     width: 100%;

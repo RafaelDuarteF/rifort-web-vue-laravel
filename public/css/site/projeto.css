@@ -1,0 +1,91 @@
+.projetoFundo, video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+.projetoFundo {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.projetoFundo h2, .projetoFundo span {
+    z-index: 100;
+    color:#fabc96;
+    font-family: "GothamHTF-Book", sans-serif;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: animacao 2s forwards;
+    text-align: center;
+    margin: 0px 20px;
+}
+.projetoFundo h2{
+    margin-top: -40px;
+    z-index: 100;
+}
+.sobreProjeto {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.projetoFundo span {
+    color: bisque;
+    z-index: 100;
+}
+.projetoFundo video {
+    opacity: 60%;
+}
+.infos_sobreProjeto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.infos_sobreProjeto img{
+    width: 50%;
+}
+.infos_sobreProjeto span {
+    color: gainsboro;
+    font-size: 20pt;
+}
+.infosProjeto {
+    display: flex;
+    justify-content: center;
+}
+.infosProjeto h2 {
+    color: #fc9a5d;
+    font-size: 30pt;
+}
+#secao1 {
+    border-bottom: 1px solid rgb(59, 58, 59);
+}
+#secao2 {
+    flex-direction: column;
+}
+#secao2 span {
+    text-align: left;
+    width: 90%;
+    margin-right: 2%;
+}
+.sobreProjeto h2 {
+    margin-top: 60px;
+}
+#secao2 h4 {
+    color: gainsboro;
+    font-size: 20pt;
+    margin-bottom: 15px;
+}
+.infos_sobreProjeto video {
+    width: 90%;
+    height: auto;
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+progress {
+    width: 90%;
+    margin-bottom: 45px;
+}

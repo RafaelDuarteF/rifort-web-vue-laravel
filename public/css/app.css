@@ -52,6 +52,10 @@ header {
 .logoHeader img {
     height: 25px;
 }
+.logoHeader:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
 .menuNav {
     display: flex;
     align-items: center;

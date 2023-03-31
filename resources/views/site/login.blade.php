@@ -24,11 +24,9 @@
                     <input type="password" name="senha" placeholder="Senha"/>
                     <button class="buttonSubmit" type="submit">LOGAR</button>
                 </form>
-                <span>Não é cadastrado ainda? <br><a>Cadastre-se</a></span>
             </div>
         </div>
     </div>
 @endsection
-
 @section('footer')
 @endsection

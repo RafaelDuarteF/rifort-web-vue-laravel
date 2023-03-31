@@ -44,7 +44,9 @@
             <div class="textImg">
                 <img alt="Proposta" src="{{ asset($artsPath . 'proposta.svg') }}"/>
                 <span>Com nossos sensores, trazemos uma solução para o gigante problema de qualidade e segurança
-                 relacionada as lotações dos ônibus nas grandes metrópoles.</span>
+                 relacionada as lotações dos ônibus nas grandes metrópoles.<br><br>
+                Saiba todos os detalhes de nosso projeto <a href='{{ route('site.projeto') }}'>clicando aqui.</a>
+                </span>
             </div>
         </div>
         @include('site/_partials/index/sobre-nos')
@@ -53,7 +55,7 @@
     @if(!empty($errors->has('email')) || !empty($errors->has('assunto')) || !empty($errors->has('mensagem')))
         <script>
             $('html, body').animate({
-                scrollTop: $('.contatoForm form').offset().top + 450
+                scrollTop: $('.contatoForm form').offset().top + 370
             }, 1000);
         </script>
     @endif
