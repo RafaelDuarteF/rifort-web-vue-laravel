@@ -2,6 +2,6 @@
 
 $(document).ready(() => {
     $("#formLogin").submit((event) => {
-        event.preventDefault();
+        
     });
 });

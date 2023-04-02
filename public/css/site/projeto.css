@@ -4,7 +4,6 @@
     display: flex;
     object-fit: cover;
     z-index: -1;
-    
 }
 .projetoFundo {
     justify-content: center;
@@ -45,7 +44,7 @@
     align-items: center;
     justify-content: center;
 }
-.infos_sobreProjeto img{
+.infos_sobreProjeto img {
     width: 50%;
 }
 .infos_sobreProjeto span {
@@ -80,7 +79,7 @@
     margin-bottom: 15px;
 }
 .infos_sobreProjeto video {
-    width: 90%;
+    width: 80%;
     height: auto;
     border-radius: 30px;
     margin-bottom: 5px;
@@ -89,3 +88,28 @@ progress {
     width: 90%;
     margin-bottom: 45px;
 }
+@media only screen and (max-width: 750px) {
+    .projetoFundo, video {
+        height: 100vh;
+    }
+    .projetoFundo span {
+        margin-top: 110px;
+    }
+    .projetoFundo h2 {
+        margin-top: 20px;
+    }
+    .infos_sobreProjeto {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+    .infos_sobreProjeto img {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .infos_sobreProjeto span {
+        width: 90%;
+    }
+    #secao2 video {
+        width: 95%;
+    }
+}   

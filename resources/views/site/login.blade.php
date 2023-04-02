@@ -10,6 +10,10 @@
 @endsection
 
 @section('conteudo')
+    @if($errors->has('erroAutenticacao'))
+        <p>Deu bosta</p>
+    @endif
+
     <div class="loginWrapper">
         <video autoplay muted loop>
             <source src="{{asset($videosPath . 'fundo2.mp4')}}" type="video/mp4"/>
@@ -17,11 +21,12 @@
         <div class="gLogin">
             <div class="card-login">
                 <h1>Login</h1>
-                <form action="" id="formLogin" method="POST">
-                    <label>E-Mail:</label>
-                    <input type="text" name="email" placeholder="Email"/>
+                <form action="{{ route('site.logar') }}" id="formLogin" method="POST">
+                    @csrf
+                    <label>Nome:</label>
+                    <input type="text" name="name" placeholder="Nome de usuário"/>
                     <label class="senhaLogin">Senha:</label>
-                    <input type="password" name="senha" placeholder="Senha"/>
+                    <input type="password" name="password" placeholder="Senha"/>
                     <button class="buttonSubmit" type="submit">LOGAR</button>
                 </form>
             </div>
