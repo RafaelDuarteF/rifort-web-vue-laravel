@@ -1,6 +1,9 @@
 <?php
 
+// Biblioteca para acessar a API do olho vivo, SP Trans - Rafael Duarte
+
 namespace App\OlhoVivo\src;
+
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Exception\RequestException;
@@ -9,16 +12,20 @@ class OlhoVivo
 {
     public $token;
     public $url;
-    public function autenticar() {
+    public $autenticado = false;
+    private $client;
+
+    public function autenticar() // Autenticar usuário na API
+    {
         $return = false;
         try {
-            $autenticar = new Client([
+            $this->client = new Client([
                 'base_uri' => $this->url,
                 'timeout' => 2.0,
                 'cookies' => true //shared session for this client
             ]);
             
-            $login = $autenticar->request(
+            $login = $this->client->request(
                 'POST',
                 'Login/Autenticar',
                 ['query' => ['token' => $this->token]]
@@ -28,13 +35,90 @@ class OlhoVivo
             } elseif (!($login->hasHeader('Set-Cookie'))) {
                 throw new \Exception("Server didn't set credentials.");
             }
-
-            $return = $login->getBody();
+            if ($login->getBody()) {
+                $this->autenticado = true;
+                $return = $login->getBody();
+            }
         } catch (RequestException $e) {
             throw new \Exception("HTTP request/response error: {$e->getMessage()}");
         } finally {
             return $return;
         }
     }
+
+    private function execute($uri, $params = [], bool $decodeAsJson = true)
+    { // Executar requisição via GET para os endpoints da API
+        if (!$this->autenticado) {
+            return 'Você não está autenticado';
+        }
+        try {
+            do {
+				$request = ($this->client->request(
+                    'GET',
+                    $uri,
+                    count($params)>0? ['query' => $params]:[]
+                ))->getBody();
+                $decoded = json_decode($request, true);
+            } while (isset($decoded['Message']));
+            return $decodeAsJson === true ? $decoded : $request;
+        } catch (RequestException $e) {
+			throw new \Exception("HTTP request/response error: {$e->getMessage()}");
+        }
+    }
+
+    public function buscarLinhas($linha)
+    { // Buscar as linhas expecíficas de São Paulo
+        $queryParams = [
+            'termosBusca' => $linha,
+        ];
+        return $this->execute($this->url . 'Linha/Buscar', $queryParams);
+    }
+
+    public function buscarParadas($endereco) {
+        $queryParams = [
+            'termosBusca' => $endereco,
+        ];
+        return $this->execute($this->url . 'Parada/Buscar', $queryParams);
+    } // Buscar as paradas expecíficas de São Paulo
+
+    public function buscarParadasPorLinha($codigoLinha) {
+        $queryParams = [
+            'codigoLinha' => intval($codigoLinha),
+        ];
+        return $this->execute($this->url . 'Parada/BuscarParadasPorLinha', $queryParams);;
+    } // Buscar as paradas por linhas de São Paulo
+
+    public function buscarPosicaoTodosOnibus() {
+        return $this->execute($this->url . 'Posicao');
+    } // Buscar as posições de todos os ônibus de de São Paulo
+
+    public function buscarPosicaoOnibusEspecifico($codigoLinha) {
+        $queryParams = [
+            'codigoLinha' => intval($codigoLinha),
+        ];
+        return $this->execute($this->url . 'Posicao/Linha', $queryParams);
+    } // Buscar a posição de ônibus específicos de São Paulo
+
+    public function buscarPrevisaoChegadaParadaLinha($codigoParada, $codigoLinha) {
+        $queryParams = [
+            'codigoParada' => intval($codigoParada),
+            'codigoLinha' => intval($codigoLinha),
+        ];
+        return $this->execute($this->url . 'Previsao', $queryParams);
+    } // Buscar a previsao de chegada de paradas específicas para linhas específicas de São Paulo
+
+    public function buscarPrevisaoChegadaLinha($codigoLinha) {
+        $queryParams = [
+            'codigoLinha' => intval($codigoLinha),
+        ];
+        return $this->execute($this->url . 'Previsao/Linha', $queryParams);
+    } // Buscar a previsao de chegada de linhas específicas em todas as paradas que ela abrange de São Paulo
+    
+    public function buscarPrevisaoChegadaParada($codigoParada) {
+        $queryParams = [
+            'codigoParada' => intval($codigoParada),
+        ];
+        return $this->execute($this->url . 'Previsao/Parada', $queryParams);
+    } // Buscar a previsao de chegada de paradas específicas em todas as lunhas que ela abrange de São Paulo
     
 }
