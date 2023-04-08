@@ -22,13 +22,13 @@
             <h2>O que é?</h2>
             <div class="infos_sobreProjeto" id="secao1">
                 <img alt="Sobre o projeto" src="{{ asset('assets/arts/bus-stop.png')}}"/>
-                <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
-                 e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de
-                 tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só
-                 a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente
-                 inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens
-                 de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica
-                 como Aldus PageMaker.
+                <span>Nosso projeto consiste em realizar a contagem de passageiros através de um
+                 sensor, usando uma tecnologia que é capaz de saber se o ônibus desejado está com
+                 uma capacidade cheia, média ou vazia. O sensor é um dispositivo capaz de detectar
+                 ações de fenômeno físico com interações de um meio, seja pela temperatura, luz
+                 ou impedância elétrica, e ele transmitirá um sinal para o dispositivo de controle
+                 do nosso projeto. Trazendo um conforto e segurança para aqueles que necessitam
+                 do transporte público.
                 </span>
             </div>
             <h2>Como é usado?</h2>
@@ -39,13 +39,13 @@
                 </video>
                 
                 <progress id="barraDeProgresso" value="0" max="100"></progress>
-                <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
-                 e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de
-                 tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só
-                 a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente
-                 inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens
-                 de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica
-                 como Aldus PageMaker.
+                <span>Ele se instala nas portas do automóvel para embarque e desembarque de passageiros,
+                 quando o passageiro entrar no ônibus o sensor automaticamente irá realizar a contagem
+                 dos mesmos através de números, acrescentando-o aos desamais passageiros contados no
+                 local. Se o passageiro realizar o desembarque, o sensor irá efetivar um decremento, ou
+                 seja, irá diminuir a quantidade já estabelecida no local. Assim, o sensor terá o controle
+                 da estatística dos passageiros e irá fornecer uma mensagem como comando para identificar
+                 a lotação do mesmo.<br> Acima, o protótipo de funcionamento dos sensores.
                 </span>
             </div>
         </div>

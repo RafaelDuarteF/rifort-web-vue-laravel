@@ -24,9 +24,15 @@
                 <form action="{{ route('site.logar') }}" id="formLogin" method="POST">
                     @csrf
                     <label>Nome:</label>
-                    <input type="text" name="name" placeholder="Nome de usuário"/>
+                    <input type="text" name="name" value="{{ old('name') }}" placeholder="Nome de usuário"/>
+                    @if($errors->has('name'))
+                        <span class="errosLogin" style="color: #fc9a5d; margin: 10px; font-size: 11pt;">{{ $errors->first('name') }}</span>
+                    @endif
                     <label class="senhaLogin">Senha:</label>
                     <input type="password" name="password" placeholder="Senha"/>
+                    @if($errors->has('password'))
+                        <span class="errosLogin" style="color: #fc9a5d; margin: 10px; font-size: 11pt;">{{ $errors->first('password') }}</span>
+                    @endif
                     <button class="buttonSubmit" type="submit">LOGAR</button>
                 </form>
             </div>

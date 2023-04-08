@@ -185,7 +185,6 @@ return [
         /*
          * Package Service Providers...
          */
-        App\OlhoVivo\OlhoVivoServiceProvider::class,
 
         /*
          * Application Service Providers...

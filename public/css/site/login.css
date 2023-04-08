@@ -82,12 +82,8 @@
     text-align: center;
     margin-top: 30px;
 }
-.card-login span a {
+.errosLogin {
     color: #fc9a5d;
-}
-.card-login span a:hover {
-    cursor: pointer;
-    opacity: 70%;
 }
 @media only screen and (max-width: 1000px) {
     .card-login {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81a83e2c78f23614095522e633c9d71c",
+    "content-hash": "e004beedd4f6bb17fa0281ec281f3b51",
     "packages": [
         {
             "name": "brick/math",
@@ -2717,6 +2717,47 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.11.14"
             },
             "time": "2023-03-28T03:41:01+00:00"
+        },
+        {
+            "name": "rafaelduarte/olhovivo",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RafaelDuarteF/lib-api-olhoVivo.git",
+                "reference": "0b3dfd2b8be989579f73a38a81cd1e2e5350e551"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RafaelDuarteF/lib-api-olhoVivo/zipball/0b3dfd2b8be989579f73a38a81cd1e2e5350e551",
+                "reference": "0b3dfd2b8be989579f73a38a81cd1e2e5350e551",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.5",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RafaelDuarte\\OlhoVivo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rafael Duarte",
+                    "email": "rafa.duartef@outlook.com"
+                }
+            ],
+            "description": "Minha biblioteca para a API olho vivo.",
+            "support": {
+                "issues": "https://github.com/RafaelDuarteF/lib-api-olhoVivo/issues",
+                "source": "https://github.com/RafaelDuarteF/lib-api-olhoVivo/tree/1.2.0"
+            },
+            "time": "2023-04-06T15:23:22+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

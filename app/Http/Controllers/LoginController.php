@@ -20,6 +20,15 @@ class LoginController extends Controller
     }
     public function login(Request $request)
     {
+        $regras = [
+            'name' => 'required|exists:users',
+            'password' => 'required',
+        ];
+        $feedback = [
+            'required' => 'O campo :attribute precisa ser informado.',
+            'name.exists' => 'O nome informado não existe no sistema!',
+        ];
+        $request->validate($regras, $feedback);
         $user = User::where('name', $request->name)->first();
         if ($user && Hash::check($request->password, $user->password)) {
             // usuário existe e senha está correta
