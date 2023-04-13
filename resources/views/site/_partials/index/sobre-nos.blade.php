@@ -33,13 +33,9 @@
         <img alt="Isabella Freitas" src="{{ asset($participantesPath . 'isabella.jpg') }}"/>
             <div class="infosPerfil">
                 <h3>Isabella Freitas Ribeiro</h3>
-                <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica
-                 e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
-                 pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
-                 sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica,
-                 permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou
-                 decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a
-                 softwares de editoração eletrônica como Aldus PageMaker.
+                <span>Estudante da Etec Sebrae, cursando desenvolvimento de sistemas. Colaborando na parte do design,
+                 levantamento de pesquisas e documentação do projeto! Cursou sobre Photoshop e criatividade em 2023 e
+                 também colaborando no projeto de midías sociais da Etec Sebrae.
                 </span>
             </div class="infosPerfil">
         </div>

@@ -5,5 +5,5 @@
     <ul class="menuNav">
         @yield('nav')
     </ul>
-    <span class="loginHeader" onclick="redirect('{{route('site.login')}}')">Login</span>
+    <span class="loginHeader" onclick="redirect('{{ route('site.login') }}')">Login</span>
 </header>

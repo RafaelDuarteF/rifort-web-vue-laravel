@@ -21,22 +21,26 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $regras = [
-            'name' => 'required|exists:users',
+            'name' => 'required',
             'password' => 'required',
         ];
         $feedback = [
-            'required' => 'O campo :attribute precisa ser informado.',
-            'name.exists' => 'O nome informado não existe no sistema!',
+            'name.required' => 'O campo nome precisa ser informado.',
+            'password.required' => 'O campo senha precisa ser informado.',
         ];
         $request->validate($regras, $feedback);
-        $user = User::where('name', $request->name)->first();
-        if ($user && Hash::check($request->password, $user->password)) {
-            // usuário existe e senha está correta
-            Auth::login($user); // iniciar a sessão para o usuário
-            return redirect()->route('user.index');
-        } else {
-            // usuário não existe ou senha está incorreta
-            return redirect()->back()->withErrors(['erroAutenticacao' => 'As credenciais informadas estão incorretas.']);
+        try {
+            $user = User::where('name', $request->name)->first();
+            if ($user && Hash::check($request->password, $user->password)) {
+                // usuário existe e senha está correta
+                Auth::login($user); // iniciar a sessão para o usuário
+                return redirect()->route('user.index');
+            } else {
+                // usuário não existe ou senha está incorreta
+                return redirect()->back()->withErrors(['erroAutenticacao' => 'As credenciais informadas estão incorretas.']);
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['erroConexao' => 'Ocorreu um erro, tente novamente mais tarde.']);
         }
     }
 }

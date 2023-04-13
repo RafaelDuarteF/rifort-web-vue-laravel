@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
@@ -21,6 +22,7 @@ Route::put('/enviarContato', [IndexController::class, 'enviarContato'])->name('s
 Route::get('/login', [LoginController::class, 'index'])->name('site.login');
 Route::post('/logar', [LoginController::class, 'login'])->name('site.logar');
 Route::get('/projeto', [ProjetoController::class, 'index'])->name('site.projeto');
+Route::get('/aplicacao', [ApplicationController::class, 'index'])->name('site.application');
 Route::group(['prefix' => 'user', 'middleware' => 'checkauth'], function () {
     Route::get('/index', [UserController::class, 'index'])->name('user.index');
 });

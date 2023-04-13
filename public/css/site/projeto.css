@@ -50,6 +50,8 @@
 .infos_sobreProjeto span {
     color: gainsboro;
     font-size: 20pt;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 .infosProjeto {
     display: flex;
@@ -88,6 +90,29 @@ progress {
     width: 90%;
     margin-bottom: 45px;
 }
+.raio {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(243, 68, 14);
+    animation: raio 1s linear forwards;
+}
+.raio2 {
+    top: 70%;
+}
+  
+@keyframes raio {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+        opacity: 0%;
+    }
+}
+
 @media only screen and (max-width: 750px) {
     .projetoFundo, video {
         height: 100vh;

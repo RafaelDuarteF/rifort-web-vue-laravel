@@ -1,9 +1,9 @@
 @extends('general.basic')
 @section('assets.css')
-    <link href="{{ asset($cssPath . 'index.css')}}" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset($cssPath . 'index.css') }}" type="text/css" rel="stylesheet"/>
 @endsection
 @section('assets.js')
-    <script src="{{ asset($jsPath . 'index.js')}}"></script>
+    <script src="{{ asset($jsPath . 'index.js') }}"></script>
 @endsection
 
 @section('nav')
@@ -13,6 +13,8 @@
 @endsection
 
 @section('conteudo')
+    <div class="raio"></div>
+    <div class="raio raio2"></div>
     @if(!empty(session()->has('contatoEnv')))
         <script>
             Swal.fire({
@@ -35,7 +37,7 @@
         <h2>Um toque de conforto e segurança em cada viagem.</h2>
         <span>Apoie o projeto RIFORT.</span>
         <video autoplay muted loop>
-            <source src="{{asset($videosPath . 'fundo.mp4')}}" type="video/mp4"/>
+            <source src="{{ asset($videosPath . 'fundo.mp4') }}" type="video/mp4"/>
         </video>
     </div>
     <div class="wrapperInfos sw">
@@ -45,7 +47,7 @@
                 <img alt="Proposta" src="{{ asset($artsPath . 'proposta.svg') }}"/>
                 <span>Com nossos sensores, trazemos uma solução para o gigante problema de qualidade e segurança
                  relacionada as lotações dos ônibus nas grandes metrópoles.<br><br>
-                Saiba todos os detalhes de nosso projeto <a href='{{ route('site.projeto') }}'>clicando aqui.</a>
+                Saiba todos os detalhes de nosso projeto <a href='{{ route('site.projeto') }}'>clicando aqui</a>.
                 </span>
             </div>
         </div>

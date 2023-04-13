@@ -8,6 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.10/dist/sweetalert2.all.min.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
         <link href="{{ asset('css/app.css')}}" type="text/css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"/>
         @yield('assets.css')
         <title>RIFORT - {{ $titulo }}</title>
@@ -20,7 +21,7 @@
         @section('footer')
             @include('general._layouts.footer')
         @show
-        <script src="{{ asset('js/app.js')}}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
         @yield('assets.js')
     </body>
 </html>

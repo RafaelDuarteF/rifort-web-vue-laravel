@@ -3,7 +3,7 @@
     <link href="{{ asset($cssPath . 'login.css')}}" type="text/css" rel="stylesheet"/>
 @endsection
 @section('assets.js')
-    <script src="{{ asset($jsPath . 'login.js')}}"></script>
+    <script src="{{ asset($jsPath . 'login.js') }}"></script>
 @endsection
 
 @section('header')
@@ -11,12 +11,26 @@
 
 @section('conteudo')
     @if($errors->has('erroAutenticacao'))
-        <p>Deu bosta</p>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Ocorreu um erro de autenticação!',
+                text: 'As credenciais informadas estão incorretas.',
+            });
+        </script>
     @endif
-
+    @if($errors->has('erroConexao'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Ocorreu um erro!',
+                text: 'Ocorreu um erro, tente novamente mais tarde.',
+            });
+        </script>
+    @endif
     <div class="loginWrapper">
         <video autoplay muted loop>
-            <source src="{{asset($videosPath . 'fundo2.mp4')}}" type="video/mp4"/>
+            <source src="{{ asset($videosPath . 'fundo2.mp4') }}" type="video/mp4"/>
         </video>
         <div class="gLogin">
             <div class="card-login">
