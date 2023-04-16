@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use RafaelDuarte\OlhoVivo\OlhoVivo;
+use Exception;
 
 class ApplicationController extends Controller
 {
@@ -16,27 +15,45 @@ class ApplicationController extends Controller
         ];
         $infosPag = array_merge($infosPag, $this->getSitePath());
         return view('site.aplicacao', $infosPag);
+    }
 
-
-
-
-        /* $olhoVivo = new OlhoVivo();
-        $olhoVivo->token = 'a45aaa502f6b721b5959c713896a9aa27b98a615a46d98a9f875be516732f090';
-        $olhoVivo->autenticar();
-        $linhas = $olhoVivo->buscarLinhas('Vila sabrina');
-        foreach ($linhas as $linha) {
-            echo $linha->cl . '<br>';
-            echo $linha->tp . '<br>';
-            echo $linha->ts . '<br>';
-            echo '<br>';
+    public function verificarChegadas()
+    {
+        $linha = $_GET['linha'];
+        $parada = $_GET['parada'];
+        $return = 0;
+        $jsonArray = array();
+        if (empty($linha) || empty($parada)) {
+            $return = 'empty';
+        } else {
+            $olhoVivo = $this->bootstrapOlhoVivo();
+            try {
+                $linhasInfo = $olhoVivo->buscarLinhas($linha)[0];
+                $linhaCod = intval($olhoVivo->buscarLinhas($linha)[0]->cl);
+                $parada = intval($olhoVivo->buscarParadas($parada)[0]['cp']);
+                $prevChegadaLinha = $olhoVivo->buscarPrevisaoChegadaLinha($linhaCod);
+            } catch (Exception $e) {
+                $return = 'invalid';
+            }
+            if ($return != 0) {
+                return $return;
+            } else {
+                $i = 0;
+                while ($i <= count($prevChegadaLinha->ps) - 1) {
+                    if (intval($prevChegadaLinha->ps[$i]->cp) == $parada) {
+                        $chegadaLinha = $prevChegadaLinha->ps[$i];
+                        array_push($jsonArray, $linhasInfo);
+                        array_push($jsonArray, $chegadaLinha);
+                        $jsonArray = array(
+                            "linha" => $jsonArray[0],
+                            "chegada" => $jsonArray[1],
+                        );
+                        return $jsonArray;
+                    }
+                    $i++;
+                }
+            }
         }
-        echo $olhoVivo->buscarMapa('/Corredor');
-        dd($olhoVivo->buscarParadas('Lapa'));
-        dd($olhoVivo->buscarParadasPorLinha(1273));
-        dd($olhoVivo->buscarPosicaoTodosOnibus());
-        dd($olhoVivo->buscarPosicaoOnibusEspecifico(34705));
-        dd($olhoVivo->buscarPrevisaoChegadaParadaLinha(4200953, 1989));
-        dd($olhoVivo->buscarPrevisaoChegadaLinha(1273)->ps[1]); // 4200953
-        dd($olhoVivo->buscarPrevisaoChegadaParada(4200953)); */
+        return $return;
     }
 }

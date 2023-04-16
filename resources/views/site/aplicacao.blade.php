@@ -14,22 +14,21 @@
     <div class="aplicacaoWrapper">
         <div class="leftAplicacao">
             <div class="divImgBus">
-                <img class="logoBus" onclick="redirect('{{ route('site.index') }}')" src="{{ asset($artsPath . 'logoHeader.png') }}"/>
-                <img src="{{ asset($artsPath . 'onibus.jfif') }}" class="imgBus"/>
+                <img alt="Página principal" class="logoBus" onclick="redirect('{{ route('site.index') }}')" src="{{ asset($artsPath . 'logoHeader.png') }}"/>
+                <!-- <h1>Verifique a lotação do seu ônibus em São Paulo!</h1> -->
+                <img src="{{ asset($artsPath . 'onibus.jpg') }}" class="imgBus"/>
             </div>
             <div class="pesquisa">
-                <label for="linha">Linha de ônibus</label>
-                <input type="text" id="linha"name="linha" placeholder="Ex: Vila sabrina / 1720-10" class="caixa caixa1"/>
-                <label for="parada">Ponto de parada</label>
-                <input type="text" id="parada" name="parada" placeholder="Ex: Avenida Paulista 1421" class="caixa caixa2"/>
+                <form>
+                    <label for="linha">Linha de ônibus</label>
+                    <input type="text" id="linha"name="linha" placeholder="Ex: Vila sabrina / 1720-10" class="caixa caixa1"/>
+                    <label for="parada">Ponto de parada</label>
+                    <input type="text" id="parada" name="parada" placeholder="Ex: Avenida Paulista 1421" class="caixa caixa2"/>
+                    <button type="button" onclick="verificarChegada('{{ route('site.application.verificarChegadas') }}')">Verificar</button>
+                </form>
             </div>
-            <div class="siteGeral">
-                <div onclick="redirect('{{ route('site.projeto') }}')" class="boxRifort sobreProjeto">
-                    <b>Sobre o projeto</b>
-                </div>
-                <div onclick="redirect('{{ route('site.index') }}')" class="boxRifort sobreRifort">
-                    <b>Sobre a Rifort</b>
-                </div>
+            <div class="guiaPesquisa">
+                <span>Insira a <a>linha de ônibus</a> e a <a>parada</a> desejada e saiba a exata lotação dos próximos ônibus a caminho.</span>
             </div>
         </div>
         <div class="rightAplicacao">
@@ -40,8 +39,8 @@
                 <div class="part-one">
                     <div class="left-part-one">
                         <div class="tituloLinhaImg">
-                            <img class="onibusVetor" src="{{ asset($artsPath . 'vetorOnibus.png') }}"/>
-                            <h2>Linha - Pico do galo 271</h2>
+                            <img alt="Linha" class="onibusVetor" src="{{ asset($artsPath . 'vetorOnibus.png') }}"/>
+                            <h2></h2>
                         </div>
                         <h2 class="titulo">Próximos Ônibus</h2>
                     </div>
@@ -63,11 +62,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="part-two"> 
+                <div class="part-two">
+                    <div class="semInfos">
+                        <span>Não há informações de chegada.</span>
+                    </div>
                     <div class="primeiroOnibus onibus">
                         <div class="corLotacao"></div>
                         <div class="infosOnibus">
-                            <h3>Chegada: 00:00</h3>
+                            <h3></h3>
                             <span>Lotação máxima: 45 passageiros</span>
                             <span>Lotação atual: 15 passageiros</span>
                             <span>Lotação porcentual: 20%</span>
@@ -76,15 +78,15 @@
                     <div class="segundoOnibus onibus">
                         <div class="corLotacao"></div>
                         <div class="infosOnibus">
-                            <h3>Chegada: 00:00</h3>
+                            <h3></h3>
                             <span>Lotação máxima: 45 passageiros</span>
                             <span>Lotação atual: 15 passageiros</span>
                             <span>Lotação porcentual: 20%</span>
                         </div>
                     </div>
                     <div class="redesSociais">
-                        <img class="logo instagramLogo" src="{{ asset($artsPath . 'instagramLogo.png') }}"/>
-                        <img class="logo facebookLogo" src="{{ asset($artsPath . 'facebookLogo.png') }}"/>
+                        <img alt="Instagram" class="logo instagramLogo" src="{{ asset($artsPath . 'instagramLogo.png') }}"/>
+                        <img alt="Facebook" class="logo facebookLogo" src="{{ asset($artsPath . 'facebookLogo.png') }}"/>
                     </div>
                 </div>
             </div>

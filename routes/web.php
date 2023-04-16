@@ -23,6 +23,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('site.login');
 Route::post('/logar', [LoginController::class, 'login'])->name('site.logar');
 Route::get('/projeto', [ProjetoController::class, 'index'])->name('site.projeto');
 Route::get('/aplicacao', [ApplicationController::class, 'index'])->name('site.application');
+Route::get('/aplicacao/verificarChegadas', [ApplicationController::class, 'verificarChegadas'])->name('site.application.verificarChegadas');
 Route::group(['prefix' => 'user', 'middleware' => 'checkauth'], function () {
     Route::get('/index', [UserController::class, 'index'])->name('user.index');
 });

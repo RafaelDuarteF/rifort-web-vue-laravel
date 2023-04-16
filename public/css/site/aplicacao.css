@@ -1,11 +1,12 @@
 .aplicacaoWrapper {
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
 }
 .leftAplicacao {
     width: 28%;
     height: 100%;
+    z-index: 1;
     border-right: 2px solid #2F2F2E;
 }
 .rightAplicacao {
@@ -13,17 +14,29 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 0;
 }
 .divImgBus {
     position: relative; 
     width: 100%;
     height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .imgBus {
     position: relative; 
     height: 100%;
     width: 100%;
-    opacity: 65%;
+    opacity: 40%;
+}
+.divImgBus h1 {
+    position: absolute;
+    font-size: 15pt;
+    z-index: 1;
+    color: #fc9a5d;
+    width: 90%;
+    text-align: center;
 }
 .logoBus {
     position: absolute; 
@@ -37,13 +50,48 @@
     opacity: 70%;
     cursor: pointer;
 }
-.pesquisa {
+.pesquisa, .pesquisa form {
     height: 43%;
     background-color: rgb(29, 28, 28);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.pesquisa form {
+    height: 100%;
+    width: 100%;
+}
+.guiaPesquisa {
+    height: 17%;
+    border-top: 2px solid #2F2F2E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gainsboro;
+    font-size: 12pt;
+}
+.guiaPesquisa span {
+    width: 90%;
+    text-align: center;
+}
+.guiaPesquisa span a {
+    color: #fc9a5d;
+}
+.pesquisa form button {
+    margin-top: 6%;
+    width: 50%;
+    height: 15%;
+    border-radius: 20px;
+    border: none;
+    background: #E65B0D;
+    color: gainsboro;
+    font-size: 14pt;
+}
+.pesquisa form button:hover {
+    opacity: 70%;
+    cursor: pointer;
 }
 .pesquisa label {
     margin-bottom: 5px;
@@ -53,7 +101,7 @@
 }
 .caixa {
     width: 90%;
-    height: 20%;
+    height: 17%;
     background-color: rgb(61, 55, 55);
     border-radius: 20px;
     border: none;
@@ -68,28 +116,13 @@
 .caixa1 {
     margin-bottom: 7%;
 }
-.siteGeral {
-    height: 17%;
-    width: 100%;
-    border-top: 2px solid #E65B0D;
+.mapa {
+    height: 99.6%;
 }
-.boxRifort {
+.resLotacao {
+    display: none;
     height: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: gainsboro;
-    font-size: 19pt;
-    font-family: 'GothamHTF-Book', sans-serif;
-    border-bottom: 2px solid #E65B0D;
-}
-.boxRifort:hover {
-    background: #222120;
-    cursor: pointer;
-}
-.resLotacao, .mapa {
-    height: 50%;
+    flex-direction: column;
 }
 .mapa iframe {
     width: 100%;
@@ -104,6 +137,7 @@
 }
 .tituloLinhaImg {
     display: flex;
+    align-items: center;
     height: 43%;
     width: 100%;
     margin-left: 4%;
@@ -119,6 +153,7 @@
 .tituloLinhaImg h2 {
     color: gainsboro;
     margin-left: 15px;
+    width: 70%;
 }
 .left-part-one .titulo {
     margin-left: 4%;
@@ -192,7 +227,7 @@
     width: 90%;
     font-size: 15pt;
     color: gainsboro;
-    margin-top: calc(-6% - -10px);
+    margin-top: -10px;
 }
 .infosOnibus h3 {
     margin-bottom: 10px;
@@ -211,4 +246,15 @@
 }
 .facebookLogo {
     margin-bottom: 0;
+}
+.semInfos {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20pt;
+    color: white;
+    border-right: 2px solid #2F2F2E;
 }
