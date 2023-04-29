@@ -61,7 +61,7 @@
                  extracurriculares na área da tecnologia da informação, principalmente relacionados a web
                  development. Seu maior amor dentro do mundo da tecnologia é desenvolvimento web, tanto na parte do
                  Back-end quanto no Front-end. Nesse projeto,
-                 atuou/atua como responsável pela parte web de desenvolvimento.
+                 atuou/atua como responsável pela parte web e mobile de desenvolvimento.
                 </span>
             </div>
         </div>

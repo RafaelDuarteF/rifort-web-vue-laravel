@@ -108,6 +108,7 @@
     color: gainsboro;
     font-family: 'GothamHTF-Book', sans-serif;
     font-size: 12pt;
+    text-align: center;
 }
 .caixa::placeholder {
     color: #ffffff;
@@ -257,4 +258,26 @@
     font-size: 20pt;
     color: white;
     border-right: 2px solid #2F2F2E;
+}
+@media only screen and (max-width: 800px) {
+    .aplicacaoWrapper {
+        flex-direction: column;
+    }
+    .leftAplicacao {
+        width: 100%;
+    }
+    .rightAplicacao {
+        flex-direction: column;
+        width: 100%;
+    }
+    .pesquisa {
+        height: 90%;
+    }
+    .divImgBus {
+        height: 50%;
+    }
+    .mapa {
+        margin-top: 13%;
+    }
+
 }

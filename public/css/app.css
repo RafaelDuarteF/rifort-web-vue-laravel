@@ -91,39 +91,90 @@ to {
 .smooth-scroll {
     transition: all 0.5s ease-in-out;
 }
-.loader {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #3498db;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -60px;
-    margin-top: -60px;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-  }
-  
-  /* Animação de rotação da tela de carregamento */
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  /* Esconde o conteúdo da página enquanto a tela de carregamento está sendo exibida */
-  .loading {
-    overflow: hidden;   
-  }
+
 
 footer {
-    height: 300px;
+    height: auto;
     width: 100%;
     margin-top: 60px;
     background: rgba(40, 40, 40);
+    display: flex;
 }
+footer .footerCantos {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footerCentro {
+    border-left: 1px solid #353535;
+    border-right: 1px solid #353535;
+    width: 40%;
+    height: 100%;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .redesSociais, footer .contatosFooter {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+}
+.footerCantos h3, .footerCentro h3 {
+    margin-top: 40px;
+    font-size: 18pt;
+    color: #fc9a5d;
+}
+footer .instagramRede, footer .emailContato {
+    display: flex;
+}
+.instagramRede, .facebookRede, .emailContato, .telefoneContato {
+    align-items: center;
+    display: flex;
+}
+.instagramRede, .emailContato {
+    margin-bottom: 10px;
+}
+.redesSociais div img, .contatosFooter div img {
+    width: 40px;
+    margin-right: 10px;
+}
+.redesSociais div span, .contatosFooter div span {
+    color: gainsboro;
+    font-size: 14pt;
+    font-family: 'Roboto', sans-serif;
+}
+.footerCentro .parceiros div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.parceiros .etecSebrae {
+    display: flex;
+    flex-direction: column;
+}
+.parceiros div {
+    color: gainsboro;
+}
+.parceiros div h4 {
+    margin: 0;
+}
+.parceiros div img {
+    width: 40%;
+    margin: 20px 0px;
+}
+.parceiros div .contatoParceiros {
+    margin-top: 10px;
+    color: #3498db;
+}
+.parceiros div .contatoParceiros:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+
 @media only screen and (max-width: 800px) {
     .logoHeader img {
         height: 15px;
@@ -146,4 +197,17 @@ footer {
     .loginHeader {
         margin-top: 15px;
     }
+    footer {
+        flex-direction: column;
+    }
+    footer .footerCantos, footer .footerCentro {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    footer .footerCentro {
+        border: none;
+        border-top: 1px solid #353535;
+        border-bottom: 1px solid #353535;
+    }
+    
 }
