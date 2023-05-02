@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e004beedd4f6bb17fa0281ec281f3b51",
+    "content-hash": "e07536941e3a7244dac698980d59c978",
     "packages": [
         {
             "name": "brick/math",
@@ -2720,16 +2720,16 @@
         },
         {
             "name": "rafaelduarte/olhovivo",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RafaelDuarteF/lib-api-olhoVivo.git",
-                "reference": "0b3dfd2b8be989579f73a38a81cd1e2e5350e551"
+                "reference": "7a5f73311fbb21a7b1ed4df309f9c7994e27b402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RafaelDuarteF/lib-api-olhoVivo/zipball/0b3dfd2b8be989579f73a38a81cd1e2e5350e551",
-                "reference": "0b3dfd2b8be989579f73a38a81cd1e2e5350e551",
+                "url": "https://api.github.com/repos/RafaelDuarteF/lib-api-olhoVivo/zipball/7a5f73311fbb21a7b1ed4df309f9c7994e27b402",
+                "reference": "7a5f73311fbb21a7b1ed4df309f9c7994e27b402",
                 "shasum": ""
             },
             "require": {
@@ -2755,9 +2755,9 @@
             "description": "Minha biblioteca para a API olho vivo.",
             "support": {
                 "issues": "https://github.com/RafaelDuarteF/lib-api-olhoVivo/issues",
-                "source": "https://github.com/RafaelDuarteF/lib-api-olhoVivo/tree/1.2.0"
+                "source": "https://github.com/RafaelDuarteF/lib-api-olhoVivo/tree/v1.3.0"
             },
-            "time": "2023-04-06T15:23:22+00:00"
+            "time": "2023-05-02T01:08:51+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

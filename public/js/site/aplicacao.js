@@ -50,7 +50,6 @@ function verificarChegada(url) {
           $(".mapa").css('heigth', '50%');
         } 
         chegadas = true;
-        console.log(res);
         let linha = res['linha']['tp'];
         let chegada1 = res && res['chegada'] && res['chegada']['vs'] && res['chegada']['vs'][0] && res['chegada']['vs'][0]['t'] ? res['chegada']['vs'][0]['t'] : false;
         let chegada2 = res && res['chegada'] && res['chegada']['vs'] && res['chegada']['vs'][1] && res['chegada']['vs'][1]['t'] ? res['chegada']['vs'][1]['t'] : false;

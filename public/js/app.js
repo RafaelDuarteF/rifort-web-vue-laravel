@@ -20,6 +20,9 @@ $(document).ready(function() {
         element.classList.add('smooth-scroll');
     });
 });
-function redirect(link) {
-    location.assign(link);
+function redirect(link, tipo = 'assign') {
+    if(tipo == 'assign')
+        location.assign(link);
+    else if(tipo == 'replace')
+        window.open(link, '_blank');
 }

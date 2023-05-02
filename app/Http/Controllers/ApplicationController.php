@@ -3,13 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\OlhoVivo\UseOlhoVivo;
-use Exception;
+use RafaelDuarte\OlhoVivo\OlhoVivo;
 
 class ApplicationController extends Controller
 {
-    use UseOlhoVivo;
-
     public function index()
     {
         $infosPag = [
@@ -24,6 +21,7 @@ class ApplicationController extends Controller
     {
         $linha = $_GET['linha'];
         $parada = $_GET['parada'];
-        return $this->verificarChegadas($linha, $parada);
+        $olhoVivo = new OlhoVivo('a45aaa502f6b721b5959c713896a9aa27b98a615a46d98a9f875be516732f090');
+        return $olhoVivo->espBuscarChegadasLinhaParadas($linha, $parada);
     }
 }
