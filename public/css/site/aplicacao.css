@@ -279,5 +279,78 @@
     .mapa {
         margin-top: 13%;
     }
-
+    .part-two {
+        flex-direction: column;
+    }
+    .semInfos, .onibus {
+        width: 100% !important;
+        border-right: none;
+        border-bottom: 1px solid #2F2F2E;
+        padding: 20px;
+    }
+    .infosOnibus {
+        width:80%;
+    }
+    .corLotacao {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .onibusVetor {
+        display: none;
+    }
+    .left-part-one {
+        width: 100%;
+    }
+    .part-one {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .tituloLinhaImg {
+        margin: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .titulo {
+        margin: 0px;
+        text-align: center;
+        margin-top: 25px;
+    }
+    .right-part-one {
+        margin-bottom: 25px;
+        width: 80%;
+    }
+    .right-part-one h3 {
+        text-align: center;
+    }
+    .tiposLotacao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tipos {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .cores {
+        margin-bottom: 6px;
+    }
+    .redesSociais {
+        width: 100%;
+        flex-direction: row;
+    }
+    .logo {
+        margin: 0;
+    }
+    .facebookLogo {
+        margin-left: 10px;
+    }
+    .instagramLogo {
+        margin-right: 10px;
+    }
 }

@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="perfil" id="gabrielLeal">
-            <img alt="Gabriel Leal" src="{{ asset($participantesPath . 'isabella.jpg') }}"/>
+            <img alt="Gabriel Leal" src="{{ asset($participantesPath . 'gabriel.jpeg') }}"/>
             <div class="infosPerfil">
                 <h3>Gabriel Leal Bonfim</h3>
                 <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica
