@@ -1,0 +1,72 @@
+.contatoForm form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 40px;
+}
+.contatoForm form button {
+    margin-top: 40px;
+    width: 50%;
+    margin-left: 25%;
+    height: 50px;
+    border-radius: 15px;
+    border: 0px;
+    background: #fc9a5d;
+    color: #141414;
+    font-size: 16pt;
+}
+.contatoForm form span {
+    font-size: 13pt;
+    color: rgb(235, 132, 132);
+    padding-top: 10px;
+}
+.contatoForm form button:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+.contatoForm {
+    width: 100%;
+    display: flex;
+}
+.infosContato {
+    width: 50%;
+    border-left: 1px solid rgb(59, 58, 59);
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.infosContato a:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+.contatoForm form label {
+    font-size: 14pt;
+    color: gainsboro;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.contatoForm form input, .contatoForm form textarea {
+    border-radius: 15px;
+    border: none;
+    background: rgb(223, 179, 112);
+    resize: none;
+}
+.contatoForm form .email {
+    height: 50px;
+}
+.contatoForm form .assunto {
+    height: 100px;
+}
+.contatoForm form .mensagem {
+    height: 200px;
+}
+.contatoForm form input::placeholder, .contatoForm form textarea::placeholder {
+    color: #252525;
+}
+.infosContato img {
+    width: 90%;
+}

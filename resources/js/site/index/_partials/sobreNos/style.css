@@ -1,0 +1,28 @@
+.perfis {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.perfil {
+    height: auto;
+    padding-bottom: 80px;
+}
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    box-shadow: 0px 0px 5px 2px #fc9a5d;
+}
+.infosPerfil h3 {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 25pt;
+    text-align: center;
+    color: #fc9a5d;
+}
+.perfil span {
+    font-size: 16pt;
+    font-family: 'GothamHTF-Book', sans-serif;
+}
