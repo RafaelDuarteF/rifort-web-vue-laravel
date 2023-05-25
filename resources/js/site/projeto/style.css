@@ -61,21 +61,36 @@
     color: #fc9a5d;
     font-size: 30pt;
 }
-#secao1 {
+#projetoSecao1 {
     border-bottom: 1px solid rgb(59, 58, 59);
 }
-#secao2 {
+#projetoSecao2 {
     flex-direction: column;
+    border-bottom: 1px solid rgb(59, 58, 59);
+    padding-bottom: 70px;
 }
-#secao2 span {
+#projetoSecao2 span {
     text-align: left;
     width: 90%;
     margin-right: 2%;
 }
+#projetoSecao3 {
+    flex-direction: column;
+}
+#projetoSecao3 span {
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+#projetoSecao3 iframe {
+    border-radius: 25px;
+    border: 4px solid #FF914D;
+}
+
 .sobreProjeto h2 {
     margin-top: 60px;
 }
-#secao2 h4 {
+#projetoSecao2 h4 {
     color: gainsboro;
     font-size: 20pt;
     margin-bottom: 15px;
@@ -134,7 +149,7 @@ progress {
     .infos_sobreProjeto span {
         width: 90%;
     }
-    #secao2 video {
+    #projetoSecao2 video {
         width: 95%;
     }
 }   

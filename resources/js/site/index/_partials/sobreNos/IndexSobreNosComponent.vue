@@ -1,6 +1,6 @@
 <template>
 
-    <div class="sobrenos box" id="secao2">
+    <div class="sobrenos box" id="secao3">
         <h2>Sobre Nós</h2>
         <span>Somos uma equipe de pequenos empreendedores, cuja iniciativa é investir
         num projeto público, para melhor solução das lotações nos transportes e problemas

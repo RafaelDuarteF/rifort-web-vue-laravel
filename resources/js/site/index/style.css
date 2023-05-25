@@ -52,6 +52,14 @@
     width: 45%;
     margin-right: 3%;
 }
+.infos .aplicacao object {
+    width: 48%;
+    margin-left: 1.5%;
+}
+.infos .aplicacao span {
+    width: 42%;
+    margin-right: 1.5%;
+}
 .infos .textImg span {
     width: 45%;
     margin-left: 3%;
@@ -68,6 +76,20 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+.redirectAplicacao {
+    width: auto;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-style: italic;
+    color: #fc9a5d;
+    font-size: 20pt;
+}
+.redirectAplicacao:hover {
+    cursor: pointer;
+    opacity: 70%;
 }
 .videoFundo h2{
     margin-top: -40px;

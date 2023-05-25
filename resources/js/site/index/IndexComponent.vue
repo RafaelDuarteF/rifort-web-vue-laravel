@@ -9,6 +9,7 @@
         </video>
     </div>
     <div class="wrapperInfos sw">
+
         <div class="infos box" id="secao1">
             <h2>Seu transporte público com conforto e segurança que apenas a RIFORT pode proporcionar</h2>
             <div class="textImg">
@@ -19,20 +20,96 @@
                 </span>
             </div>
         </div>
+
+        <div class="infos box" id="secao2">
+            <h2>Aplicação</h2>
+            <div class="textImg aplicacao">
+                <span>Utilize a nossa aplicação por <a :href="route_aplicacao">aqui</a>. Nela, você pode verificar a lotação dos próximos
+                     ônibus que você deseja usufruir em São Paulo!
+                </span>
+                <object type="image/svg+xml" :data="$store.state.paths.videosPath + 'aplicacao.svg'"></object>
+            </div>
+            <a class="redirectAplicacao" :href="route_aplicacao">Ir para a aplicação</a>
+        </div>
+
         <index-sobre-nos-component></index-sobre-nos-component>
-        <index-contato-component></index-contato-component>
+        <index-contato-component 
+            :erro_preenchimento="erro_preenchimento" 
+            :contato_enviado="contato_enviado" 
+            :erro_contato="erro_contato" 
+            :csrf="csrf" 
+            :route_contato="route_contato"
+            :erro_email="erro_email"
+            :erro_assunto="erro_assunto"
+            :erro_mensagem="erro_mensagem"
+        >
+        </index-contato-component>
+
     </div>
 </template>
 <script>
     export default{
-        props: ['participantes', 'arts', 'videos', 'route_projeto'],
+        props: {
+            participantes: {
+                type: String,
+                required: true
+            },
+            arts: {
+                type: String,
+                required: true
+            },
+            videos: {
+                type: String,
+                required: true
+            },
+            route_projeto: {
+                type: String,
+                required: true
+            },
+            route_contato: {
+                type: String,
+                required: true
+            },
+            route_aplicacao: {
+                type: String,
+                required: true,
+            },
+            csrf: {
+                type: String,
+                required: true
+            },
+            erro_preenchimento: {
+                type: String,
+                required: false
+            },
+            contato_enviado: {
+                type: String,
+                required: false
+            },
+            erro_contato: {
+                type: String,
+                required: false
+            },
+            erro_email: {
+                type: String,
+                required: false,
+            },
+            erro_assunto: {
+                type: String,
+                required: false,
+            },
+            erro_mensagem: {
+                type: String,
+                required: false,
+            },
+        },
         mounted() {
             this.$store.commit('SET_PARTICIPANTES_PATH', this.participantes);
             this.$store.commit('SET_ARTS_PATH', this.arts);
             this.$store.commit('SET_VIDEOS_PATH', this.videos);
             $(".navSobreNos").on('click', function() {
-            $('html, body').animate({
-                scrollTop: $('#secao2').offset().top -100
+                $('html, body').animate({
+                    scrollTop: $('#secao3').offset().top -100
                 }, 1000);
             });
             $(".navProposta").on('click', function() {
@@ -42,7 +119,12 @@
             });
             $(".navContato").on('click', function() {
                 $('html, body').animate({
-                scrollTop: $('#secao3').offset().top -100
+                scrollTop: $('#secao4').offset().top -100
+                }, 1000);
+            });
+            $(".navAplicacao").on('click', function() {
+                $('html, body').animate({
+                scrollTop: $('#secao2').offset().top -100
                 }, 1000);
             });
         }

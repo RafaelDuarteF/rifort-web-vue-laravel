@@ -23,15 +23,18 @@
 	font-style: normal;
 }
 @font-face {font-family: "GothamHTF-Book"; src: url("//db.onlinewebfonts.com/t/1af7207b68ef04bc4e453e0aa814e986.eot"); src: url("//db.onlinewebfonts.com/t/1af7207b68ef04bc4e453e0aa814e986.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1af7207b68ef04bc4e453e0aa814e986.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1af7207b68ef04bc4e453e0aa814e986.woff") format("woff"), url("//db.onlinewebfonts.com/t/1af7207b68ef04bc4e453e0aa814e986.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1af7207b68ef04bc4e453e0aa814e986.svg#GothamHTF-Book") format("svg"); }
-body {
+body, #app {
     margin: 0;
     font-family: 'GothamHTF-Book', sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-body * {
+body *, #app {
     box-sizing: border-box;
+}
+#app {
+    width: calc(100vw - 8px);
 }
 header {
     width: 100%;
