@@ -1,3 +1,4 @@
+@import '../../../css/theme.scss';
 
 .videoFundo, video {
     width: 100%;
@@ -13,7 +14,7 @@
 }
 .videoFundo h2, .videoFundo span {
     z-index: 100;
-    color:#fabc96;
+    color: $secondary-color;
     font-family: "GothamHTF-Book", sans-serif;
     position: absolute;
     opacity: 0;
@@ -40,11 +41,11 @@
 }
 
 .box h2 {
-    color: #fc9a5d;
+    color: $primary-color;
 }
 .box span {
     font-size: 20pt;
-    color: gainsboro;
+    color: $thirty-color;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }
@@ -65,7 +66,7 @@
     margin-left: 3%;
 }
 .infos .textImg span a {
-    color: #fc9a5d;
+    color: $primary-color;
 }
 .infos .textImg span a:hover {
     opacity: 70%;
@@ -84,7 +85,7 @@
     margin-bottom: 20px;
     text-decoration: none;
     font-style: italic;
-    color: #fc9a5d;
+    color: $primary-color;
     font-size: 20pt;
 }
 .redirectAplicacao:hover {

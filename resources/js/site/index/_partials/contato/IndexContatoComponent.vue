@@ -9,13 +9,13 @@
                 <input type="hidden" name="_token" :value="csrf">
                 <input type="hidden" name="_method" value="PUT">
                 <label>E-Mail:</label>
-                <input class="email" type="text" name="email" value="" placeholder="Email"/>
+                <input class="email" type="text" name="email" :value="old_contato_email ?? ''" placeholder="Email"/>
                 <span>{{ erro_email ?? '' }}</span>
                 <label>Assunto:</label>
-                <textarea class="assunto" name="assunto" type="text" placeholder="Assunto"></textarea>
+                <textarea class="assunto" name="assunto" type="text" :value="old_contato_assunto ?? ''" placeholder="Assunto"></textarea>
                 <span>{{ erro_assunto }}</span>
                 <label>Mensagem:</label>
-                <textarea class="mensagem" name="mensagem" type="text" placeholder="Mensagem"></textarea>
+                <textarea class="mensagem" name="mensagem" type="text" :value="old_contato_mensagem ?? ''" placeholder="Mensagem"></textarea>
                 <span>{{ erro_mensagem }}</span>
                 <button type="submit">Enviar</button>
             </form>
@@ -61,11 +61,20 @@ export default {
             type: String,
                
         },
+        old_contato_email: {
+            type: String,
+            required: false,
+        },
+        old_contato_assunto: {
+            type: String,
+            required: false,
+        },
+        old_contato_mensagem: {
+            type: String,
+            required: false,
+        },
     },
     mounted() {
-        console.log(this.erro_preenchimento)
-        console.log(this.erro_contato)
-        console.log(this.contato_enviado)
         if(this.erro_preenchimento == '1') {
             $('html, body').animate({
                 scrollTop: $('.contatoForm form').offset().top - 70
@@ -89,6 +98,6 @@ export default {
 }
 </script>
 
-<style scoped>
-    @import './style.css';
+<style scoped lang="scss">
+    @import './style.scss';
 </style>

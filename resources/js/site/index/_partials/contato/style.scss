@@ -1,3 +1,6 @@
+@import '../../../../../css/theme.scss';
+
+
 .contatoForm form {
     display: flex;
     flex-direction: column;
@@ -13,8 +16,8 @@
     height: 50px;
     border-radius: 15px;
     border: 0px;
-    background: #fc9a5d;
-    color: #141414;
+    background: $primary-color;
+    color: $background-color;
     font-size: 16pt;
 }
 .contatoForm form span {
@@ -45,7 +48,7 @@
 }
 .contatoForm form label {
     font-size: 14pt;
-    color: gainsboro;
+    color: $thirty-color;
     margin-top: 20px;
     margin-bottom: 10px;
 }

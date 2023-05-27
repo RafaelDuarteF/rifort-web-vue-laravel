@@ -1,3 +1,5 @@
+@import '../../../css/theme.scss';
+
 .loginWrapper {
     width: 100vw;
     height: 100vh;
@@ -14,13 +16,13 @@
 .gLogin h1 {
     /* color: #bbb6bb; */
     margin-bottom: 40px;
-    color: #fc9a5d;
+    color: $primary-color;
     margin-top: -2px;
 }
 .card-login {
     width: 30%;
     height: 70%;
-    background: #141414;
+    background: $background-color;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 5px black;
     display: flex;
@@ -37,7 +39,7 @@
     flex-direction: column;
 }
 .card-login form label {
-    color: gainsboro;
+    color: $thirty-color;
     margin-bottom: 5px;
     font-size: 13pt;
 }
@@ -49,7 +51,7 @@
     border: 0px;
     height: 50px;
     border-radius: 15px;
-    color: gainsboro;
+    color: $thirty-color;
     background: #686668;
 }
 .card-login form input::placeholder {
@@ -78,12 +80,12 @@
     opacity: 50%;
 }
 .card-login span {
-    color: gainsboro;
+    color: $thirty-color;
     text-align: center;
     margin-top: 30px;
 }
 .errosLogin {
-    color: #fc9a5d;
+    color: $primary-color;
 }
 @media only screen and (max-width: 1000px) {
     .card-login {

@@ -1,14 +1,14 @@
 <template>
     <div class="raio"></div>
     <div class="raio raio2"></div>
-    <div class="projetoFundo">
+    <div class="projetoFundo" v-if="$store.state.paths.videosPath">
         <h2>Tecnologia e conforto em seu transporte.</h2>
         <span>Confira todas as informações sobre nosso projeto.</span>
         <video autoplay muted loop>
             <source :src="$store.state.paths.videosPath + '/projeto-fundo.mp4'" type="video/mp4"/>
         </video>
     </div>
-    <div class="infosProjeto sw">
+    <div class="infosProjeto sw" v-if="$store.state.paths.artsPath">
         <div class="sobreProjeto">
             <h2>O que é?</h2>
             <div class="infos_sobreProjeto" id="projetoSecao1">
@@ -80,6 +80,6 @@
         },
     }
 </script>
-<style>
-    @import './style.css';
+<style lang="scss">
+    @import './style.scss';
 </style>

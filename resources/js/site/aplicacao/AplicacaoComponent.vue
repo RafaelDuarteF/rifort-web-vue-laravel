@@ -1,6 +1,6 @@
 <template>
     <div class="aplicacaoWrapper">
-        <div class="leftAplicacao">
+        <div class="leftAplicacao" v-if="$store.state.paths.artsPath">
             <div class="divImgBus">
                 <img alt="Página principal" class="logoBus" @click="redirect(route_index)" :src="$store.state.paths.artsPath + 'logoheader.png'"/>
                 <img :src="$store.state.paths.artsPath + 'onibus.jpg'" class="imgBus"/>
@@ -104,16 +104,21 @@
             verificarChegada(route) {
                 let linhaIn = document.querySelector('#linha').value;
                 let paradaIn = document.querySelector('#parada').value;
+                let retorno = '';
 
                 axios.get(route, { params: { linha: linhaIn, parada: paradaIn } })
                     .then(response => {
-                        exibir(response.data)
-                        console.log('foi')
-
-                        clearInterval(this.intervalId);
-                        this.intervalId = setInterval(() => {
-                            this.verificarChegada(route);
-                        }, 5000);
+                        retorno = exibir(response.data)
+                        if(retorno == 'interval') {
+                            clearInterval(this.intervalId);
+                            this.intervalId = setInterval(() => {
+                                this.verificarChegada(route);
+                            }, 10000);
+                        }
+                        else {
+                            clearInterval(this.intervalId);
+                        }
+                        
                     })
                     .catch(errors => {
                         console.log(errors)
@@ -172,6 +177,7 @@
                                 this.onibus2 = 'Chegada: ' + chegada2;
                             }
                         }
+                        return 'interval';
                     }
                 }
             }
@@ -179,6 +185,6 @@
     }
 </script>
 
-<style>
-    @import './style.css';
+<style lang="scss">
+    @import './style.scss';
 </style>

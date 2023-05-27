@@ -9,7 +9,7 @@
         <script src="https://unpkg.com/scrollreveal"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"/>
-        @vite(['./resources/css/app.css', './resources/js/app.js'])
+        @vite(['./resources/css/app.scss', './resources/js/app.js'])
         <title>RIFORT - {{ $titulo }}</title>
     </head>
     <body style="background: {{ !empty($fundo) ? $fundo : '#141414' }}">

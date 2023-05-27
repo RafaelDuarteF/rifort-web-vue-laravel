@@ -41,6 +41,9 @@
         participantes={{ $participantesPath }}
         arts={{ $artsPath }}
         videos={{ $videosPath }}
+        old_contato_email="{{ old('email') ?? '' }}"
+        old_contato_assunto="{{ old('assunto') ?? '' }}"
+        old_contato_mensagem="{{ old('mensagem') ?? '' }}"
         erro_preenchimento={{ $erroPreenchimento ?? false }}
         contato_enviado={{ $contatoEnviado ?? false }}
         erro_contato={{ $erroContato ?? false }}

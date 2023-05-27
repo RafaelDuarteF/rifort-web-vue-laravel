@@ -1,3 +1,5 @@
+@import './theme.scss';
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -87,7 +89,7 @@ to {
 }
 .loginHeader {
     right: 20px;
-    color: gainsboro;
+    color: $thirty-color;
     position: fixed;
     font-size: 12pt;
 }
@@ -128,7 +130,7 @@ footer .redesSociais, footer .contatosFooter {
 .footerCantos h3, .footerCentro h3 {
     margin-top: 40px;
     font-size: 18pt;
-    color: #fc9a5d;
+    color: $primary-color;
 }
 footer .instagramRede, footer .emailContato {
     display: flex;
@@ -159,7 +161,7 @@ footer .instagramRede, footer .emailContato {
     flex-direction: column;
 }
 .parceiros div {
-    color: gainsboro;
+    color: $thirty-color;
 }
 .parceiros div h4 {
     margin: 0;

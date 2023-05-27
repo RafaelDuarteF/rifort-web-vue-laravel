@@ -1,3 +1,5 @@
+@import '../../../css/theme.scss';
+
 .aplicacaoWrapper {
     width: 100vw;
     height: 100vh;
@@ -34,7 +36,7 @@
     position: absolute;
     font-size: 15pt;
     z-index: 1;
-    color: #fc9a5d;
+    color: $primary-color;
     width: 90%;
     text-align: center;
 }
@@ -77,7 +79,7 @@
     text-align: center;
 }
 .guiaPesquisa span a {
-    color: #fc9a5d;
+    color: $primary-color;
 }
 .pesquisa form button {
     margin-top: 6%;
@@ -86,7 +88,7 @@
     border-radius: 20px;
     border: none;
     background: #E65B0D;
-    color: gainsboro;
+    color: $thirty-color;
     font-size: 14pt;
 }
 .pesquisa form button:hover {
@@ -97,7 +99,7 @@
     margin-bottom: 5px;
     font-family: 'GothamHTF-Book', sans-serif;
     font-size: 15pt;
-    color: gainsboro;
+    color: $thirty-color;
 }
 .caixa {
     width: 90%;
@@ -105,7 +107,7 @@
     background-color: rgb(61, 55, 55);
     border-radius: 20px;
     border: none;
-    color: gainsboro;
+    color: $thirty-color;
     font-family: 'GothamHTF-Book', sans-serif;
     font-size: 12pt;
     text-align: center;
@@ -152,19 +154,19 @@
     height: 80%;
 }
 .tituloLinhaImg h2 {
-    color: gainsboro;
+    color: $thirty-color;
     margin-left: 15px;
     width: 70%;
 }
 .left-part-one .titulo {
     margin-left: 4%;
     font-size: 22pt;
-    color: gainsboro;
+    color: $thirty-color;
 }
 .right-part-one {
     width: 40%;
     height: 100%;
-    color: gainsboro;
+    color: $thirty-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,7 +229,7 @@
     flex-direction: column;
     width: 90%;
     font-size: 15pt;
-    color: gainsboro;
+    color: $thirty-color;
     margin-top: -10px;
 }
 .infosOnibus h3 {

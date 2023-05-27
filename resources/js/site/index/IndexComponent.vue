@@ -8,7 +8,7 @@
             <source :src="$store.state.paths.videosPath + '/fundo.mp4'" type="video/mp4"/>
         </video>
     </div>
-    <div class="wrapperInfos sw">
+    <div class="wrapperInfos sw" v-if="$store.state.paths.artsPath">
 
         <div class="infos box" id="secao1">
             <h2>Seu transporte público com conforto e segurança que apenas a RIFORT pode proporcionar</h2>
@@ -42,6 +42,9 @@
             :erro_email="erro_email"
             :erro_assunto="erro_assunto"
             :erro_mensagem="erro_mensagem"
+            :old_contato_email="old_contato_email"
+            :old_contato_assunto="old_contato_assunto"
+            :old_contato_mensagem="old_contato_mensagem"
         >
         </index-contato-component>
 
@@ -102,6 +105,18 @@
                 type: String,
                 required: false,
             },
+            old_contato_email: {
+                type: String,
+                required: false,
+            },
+            old_contato_assunto: {
+                type: String,
+                required: false,
+            },
+            old_contato_mensagem: {
+                type: String,
+                required: false,
+            },
         },
         mounted() {
             this.$store.commit('SET_PARTICIPANTES_PATH', this.participantes);
@@ -131,6 +146,6 @@
     }
 </script>
 
-<style>
-    @import './style.css';
+<style lang="scss">
+    @import './style.scss';
 </style>

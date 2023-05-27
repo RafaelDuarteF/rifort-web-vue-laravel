@@ -21,13 +21,9 @@
                 <img alt="Gabriel Leal" :src="$store.state.paths.participantesPath + '/gabriel.jpeg'"/>
                 <div class="infosPerfil">
                     <h3>Gabriel Leal Bonfim</h3>
-                    <span>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica
-                    e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
-                    pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
-                    sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica,
-                    permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou
-                    decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a
-                    softwares de editoração eletrônica como Aldus PageMaker.
+                    <span>Possue 17 anos e é estudante da ETEC Sebrae no 3° ano do curso de Desenvolvimento de Sistemas.
+                         Nesse trabalho, teve como função ajudar o desenvolvimento do projeto, tanto na parte documental como na construção do
+                         produto.
                     </span>
                 </div>
             </div>
@@ -76,6 +72,6 @@ export default {
 }
 </script>
 
-<style scoped>
-    @import './style.css';
+<style scoped lang="scss">
+    @import './style.scss';
 </style>
