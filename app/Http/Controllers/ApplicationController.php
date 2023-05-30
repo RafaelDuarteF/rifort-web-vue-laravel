@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use RafaelDuarte\OlhoVivo\OlhoVivo;
+use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
 {
@@ -17,10 +18,10 @@ class ApplicationController extends Controller
         return view('site.aplicacao', $infosPag);
     }
 
-    public function obterChegadas()
+    public function obterChegadas(Request $request)
     {
-        $linha = $_GET['linha'];
-        $parada = $_GET['parada'];
+        $linha = $request->input('linha');
+        $parada = $request->input('parada');
         $olhoVivo = new OlhoVivo('a45aaa502f6b721b5959c713896a9aa27b98a615a46d98a9f875be516732f090');
         return $olhoVivo->espBuscarChegadasLinhaParadas($linha, $parada);
     }

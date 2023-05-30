@@ -21,9 +21,9 @@
                 <img alt="Gabriel Leal" :src="$store.state.paths.participantesPath + '/gabriel.jpeg'"/>
                 <div class="infosPerfil">
                     <h3>Gabriel Leal Bonfim</h3>
-                    <span>Possue 17 anos e é estudante da ETEC Sebrae no 3° ano do curso de Desenvolvimento de Sistemas.
-                         Nesse trabalho, teve como função ajudar o desenvolvimento do projeto, tanto na parte documental como na construção do
-                         produto.
+                    <span>Estudante da Etec Sebrae no curso de desenvolvimento de sistemas, desde muito pequeno sempre foi amante da tecnologia, 
+                         então não é difícil sugerir que encontrou seu caminho na tela do computador. Colaborou no desenvolvimento do projeto 
+                         acompanhando as reuniões auxiliando na criação do produto final.
                     </span>
                 </div>
             </div>

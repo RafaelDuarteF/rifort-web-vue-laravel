@@ -113,8 +113,8 @@ footer .footerCantos {
     align-items: center;
 }
 footer .footerCentro {
-    border-left: 1px solid #353535;
-    border-right: 1px solid #353535;
+    border-left: 1px solid $line-500-color;
+    border-right: 1px solid $line-500-color;
     width: 40%;
     height: 100%;
     padding-bottom: 40px;
@@ -211,8 +211,8 @@ footer .instagramRede, footer .emailContato {
     }
     footer .footerCentro {
         border: none;
-        border-top: 1px solid #353535;
-        border-bottom: 1px solid #353535;
+        border-top: 1px solid $line-500-color;
+        border-bottom: 1px solid $line-500-color;
     }
     
 }
