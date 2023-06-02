@@ -77,7 +77,7 @@ export default {
     mounted() {
         if(this.erro_preenchimento == '1') {
             $('html, body').animate({
-                scrollTop: $('.contatoForm form').offset().top - 70
+                scrollTop: $('#formContato').offset().top + 450
             }, 1000);
         }
         else if(this.erro_contato == '1') {
