@@ -1,18 +1,22 @@
 @import '../../../css/theme.scss';
 
-.projetoFundo, video {
+.projetoFundo,
+video {
     width: 100%;
     height: 100%;
     display: flex;
     object-fit: cover;
     z-index: -1;
 }
+
 .projetoFundo {
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.projetoFundo h2, .projetoFundo span {
+
+.projetoFundo h2,
+.projetoFundo span {
     z-index: 100;
     color: $secondary-color;
     font-family: "GothamHTF-Book", sans-serif;
@@ -23,10 +27,12 @@
     text-align: center;
     margin: 0px 20px;
 }
-.projetoFundo h2{
+
+.projetoFundo h2 {
     margin-top: -40px;
     z-index: 100;
 }
+
 .sobreProjeto {
     width: 90%;
     display: flex;
@@ -34,56 +40,69 @@
     align-items: center;
     margin-top: 30px;
 }
+
 .projetoFundo span {
     color: bisque;
     z-index: 100;
 }
+
 .projetoFundo video {
     opacity: 60%;
 }
+
 .infos_sobreProjeto {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .infos_sobreProjeto img {
     width: 50%;
 }
+
 .infos_sobreProjeto span {
     color: $thirty-color;
     font-size: 20pt;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }
+
 .infosProjeto {
     display: flex;
     justify-content: center;
 }
+
 .infosProjeto h2 {
     color: $primary-color;
     font-size: 30pt;
 }
+
 #projetoSecao1 {
     border-bottom: 1px solid rgb(59, 58, 59);
 }
+
 #projetoSecao2 {
     flex-direction: column;
     border-bottom: 1px solid rgb(59, 58, 59);
     padding-bottom: 70px;
 }
+
 #projetoSecao2 span {
     text-align: left;
     width: 90%;
     margin-right: 2%;
 }
+
 #projetoSecao3 {
     flex-direction: column;
 }
+
 #projetoSecao3 span {
     width: 90%;
     margin-top: 30px;
     margin-bottom: 80px;
 }
+
 #projetoSecao3 iframe {
     border-radius: 25px;
     border: 4px solid #FF914D;
@@ -92,21 +111,25 @@
 .sobreProjeto h2 {
     margin-top: 60px;
 }
+
 #projetoSecao2 h4 {
     color: $thirty-color;
     font-size: 20pt;
     margin-bottom: 15px;
 }
+
 .infos_sobreProjeto video {
     width: 80%;
     height: auto;
     border-radius: 30px;
     margin-bottom: 5px;
 }
+
 progress {
     width: 90%;
     margin-bottom: 45px;
 }
+
 .raio {
     position: absolute;
     top: 30%;
@@ -116,14 +139,16 @@ progress {
     background-color: rgb(243, 68, 14);
     animation: raio 1s linear forwards;
 }
+
 .raio2 {
     top: 70%;
 }
-  
+
 @keyframes raio {
     0% {
         left: -100%;
     }
+
     100% {
         left: 0%;
         opacity: 0%;
@@ -131,27 +156,35 @@ progress {
 }
 
 @media only screen and (max-width: 750px) {
-    .projetoFundo, video {
+
+    .projetoFundo,
+    video {
         height: 100vh;
     }
+
     .projetoFundo span {
         margin-top: 110px;
     }
+
     .projetoFundo h2 {
         margin-top: 20px;
     }
+
     .infos_sobreProjeto {
         flex-direction: column;
         padding-bottom: 60px;
     }
+
     .infos_sobreProjeto img {
         width: 90%;
         margin-bottom: 10px;
     }
+
     .infos_sobreProjeto span {
         width: 90%;
     }
+
     #projetoSecao2 video {
         width: 95%;
     }
-}   
+}

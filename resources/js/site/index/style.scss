@@ -1,18 +1,22 @@
 @import '../../../css/theme.scss';
 
-.videoFundo, video {
+.videoFundo,
+video {
     width: 100%;
     height: 100%;
     display: flex;
     object-fit: cover;
     z-index: -1;
 }
+
 .videoFundo {
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.videoFundo h2, .videoFundo span {
+
+.videoFundo h2,
+.videoFundo span {
     z-index: 100;
     color: $secondary-color;
     font-family: "GothamHTF-Book", sans-serif;
@@ -23,9 +27,11 @@
     text-align: center;
     margin: 0px 20px;
 }
+
 .videoFundo video {
     opacity: 50%;
 }
+
 .box {
     height: auto;
     padding-bottom: 80px;
@@ -43,34 +49,42 @@
 .box h2 {
     color: $primary-color;
 }
+
 .box span {
     font-size: 20pt;
     color: $thirty-color;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }
+
 .infos .textImg img {
     width: 45%;
     margin-right: 3%;
 }
+
 .infos .aplicacao object {
     width: 48%;
     margin-left: 1.5%;
 }
+
 .infos .aplicacao span {
     width: 42%;
     margin-right: 1.5%;
 }
+
 .infos .textImg span {
     width: 45%;
     margin-left: 3%;
 }
+
 .infos .textImg span a {
     color: $primary-color;
 }
+
 .infos .textImg span a:hover {
     opacity: 70%;
 }
+
 .textImg {
     display: flex;
     width: 100%;
@@ -78,6 +92,7 @@
     align-items: center;
     margin-top: 20px;
 }
+
 .redirectAplicacao {
     width: auto;
     text-align: center;
@@ -88,19 +103,24 @@
     color: $primary-color;
     font-size: 20pt;
 }
+
 .redirectAplicacao:hover {
     cursor: pointer;
     opacity: 70%;
 }
-.videoFundo h2{
+
+.videoFundo h2 {
     margin-top: -40px;
 }
+
 .videoFundo span {
     color: bisque;
 }
+
 .box:last-child {
     border-bottom: 0px;
 }
+
 .raio {
     position: absolute;
     top: -100%;
@@ -111,57 +131,73 @@
     background-color: rgb(243, 68, 14);
     animation: raio 1s linear forwards;
 }
+
 .raio2 {
     left: 70%;
 }
-  
-  @keyframes raio {
+
+@keyframes raio {
     0% {
-      top: -100%;
+        top: -100%;
     }
+
     100% {
-      top: 100%;
-      opacity: 0%;
+        top: 100%;
+        opacity: 0%;
     }
-  }
+}
+
 @media only screen and (max-width: 800px) {
     .contatoForm {
         display: flex;
         align-items: center;
         flex-direction: column;
     }
-    .contatoForm form, .infosContato {
+
+    .contatoForm form,
+    .infosContato {
         width: 90%;
     }
+
     .infosContato {
         border: none;
     }
 }
+
 @media only screen and (max-width: 750px) {
     .textImg {
         flex-direction: column;
     }
-    .infos .textImg span, .infos .textImg img {
+
+    .infos .textImg span,
+    .infos .textImg img {
         width: 90%;
     }
+
     .infos .textImg span {
         margin-top: 20px;
     }
+
     .videoFundo span {
         margin-top: 90px;
     }
+
     .videoFundo h2 {
         margin-top: 20px;
     }
+
     .videoFundo video {
         height: 100vh;
     }
+
     .infosPerfil h3 {
         margin-left: 0px;
     }
+
     .perfil {
         padding-bottom: 50px;
     }
+
     .infos .aplicacao object {
         width: 80%;
         margin-top: 30px;

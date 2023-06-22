@@ -12,7 +12,7 @@ const store = createStore({
     },
     mutations: {
         SET_PARTICIPANTES_PATH(state, participantesPath) {
-          state.paths.participantesPath = participantesPath;
+            state.paths.participantesPath = participantesPath;
         },
         SET_ARTS_PATH(state, artsPath) {
             state.paths.artsPath = artsPath;

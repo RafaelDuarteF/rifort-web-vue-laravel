@@ -44,7 +44,7 @@
                      comunicação dos nossos valores e do nosso propósito. Definimos de forma visual o reconhecimento
                      e valor da RifortBus através do documento seguinte:
                 </span>
-                <iframe src="seu_pdf.pdf" width="90%" height="900px"></iframe>
+                <iframe src="./assets/IDV.pdf" width="90%" height="900px"></iframe>
             </div>
         </div>
     </div>
