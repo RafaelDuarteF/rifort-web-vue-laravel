@@ -7,10 +7,12 @@
             </div>
             <div class="pesquisa">
                 <form>
-                    <label for="linha">Linha de ônibus</label>
-                    <input type="text" id="linha" name="linha" placeholder="Ex: Vila sabrina / 1720-10" class="caixa caixa1"/>
+                    <label for="linha">Número da linha</label>
+                    <input type="text" id="numLinha" name="numLinha" placeholder="Ex: 1720-10" class="caixa caixa1"/>
+                    <label for="linha">Sentido da linha</label>
+                    <input type="text" id="linha" name="linha" placeholder="Ex: Vila sabrina" class="caixa caixa2"/>
                     <label for="parada">Ponto de parada</label>
-                    <input type="text" id="parada" name="parada" placeholder="Ex: Avenida Paulista 1421" class="caixa caixa2"/>
+                    <input type="text" id="parada" name="parada" placeholder="Ex: Avenida Paulista 1421" class="caixa caixa3"/>
                     <button type="button" @click="verificarChegada(route_verificar_chegadas)">Verificar</button>
                 </form>
             </div>
@@ -103,27 +105,35 @@
             },
             verificarChegada(route) {
                 let linhaIn = document.querySelector('#linha').value;
+                let numLinhaIn = document.querySelector('#numLinha').value;
                 let paradaIn = document.querySelector('#parada').value;
                 let retorno = '';
 
-                axios.get(route, { params: { linha: linhaIn, parada: paradaIn } })
-                    .then(response => {
-                        retorno = exibir(response.data)
-                        if(retorno == 'interval') {
-                            clearInterval(this.intervalId);
-                            this.intervalId = setInterval(() => {
-                                this.verificarChegada(route);
-                            }, 10000);
-                        }
-                        else {
-                            clearInterval(this.intervalId);
-                        }
-                        
-                    })
-                    .catch(errors => {
-                        console.log(errors)
-                    })
-
+                if(linhaIn == '' || numLinhaIn == '' || paradaIn == '') {
+                    Swal.fire({
+                            title: 'Preencha a linha e a parada',
+                            text: 'A linha e a parada precisa ser informada!',
+                            icon: 'error'
+                    });
+                } else {
+                    axios.get(route, { params: { linha: linhaIn, parada: paradaIn, numLinha: numLinhaIn } })
+                        .then(response => {
+                            retorno = exibir(response.data)
+                            if(retorno == 'interval') {
+                                clearInterval(this.intervalId);
+                                this.intervalId = setInterval(() => {
+                                    this.verificarChegada(route);
+                                }, 10000);
+                            }
+                            else {
+                                clearInterval(this.intervalId);
+                            }
+                            
+                        })
+                        .catch(errors => {
+                            console.log(errors)
+                        })
+                }
                 const exibir = (res) => {
                     if(res == 0) {
                         Swal.fire({
@@ -165,10 +175,10 @@
                             $(".mapa").css('heigth', '50%');
                         } 
                         this.chegadas = true;
-                        let linha = res['linha']['tp'];
+                        let linha = res['linha']['nome'];
                         let chegada1 = res?.chegada?.vs?.[0]?.t ?? false;
                         let chegada2 = res?.chegada?.vs?.[1]?.t ?? false;
-                        this.linhaOnibus = 'Linha - ' + res['linha']['lt'] + ' ' + linha;
+                        this.linhaOnibus = 'Linha - ' + res['linha']['num'] + ' ' + linha;
                         if(!chegada1) {
                             $('.onibus').css('width', '92%');
                             $('.primeiroOnibus').css('display', 'none');

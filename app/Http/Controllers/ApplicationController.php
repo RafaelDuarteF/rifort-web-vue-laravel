@@ -22,7 +22,8 @@ class ApplicationController extends Controller
     {
         $linha = $request->input('linha');
         $parada = $request->input('parada');
+        $numLinha = $request->input('numLinha');
         $olhoVivo = new OlhoVivo('a45aaa502f6b721b5959c713896a9aa27b98a615a46d98a9f875be516732f090');
-        return $olhoVivo->espBuscarChegadasLinhaParadas($linha, $parada);
+        return $olhoVivo->espBuscarChegadasLinhaParadas($linha, $parada, $numLinha);
     }
 }
