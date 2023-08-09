@@ -1,4 +1,3 @@
-// Javascript de funções gerais
 
 $(window).scroll(function() {
     let scroll = $(window).scrollTop();
@@ -8,7 +7,7 @@ $(window).scroll(function() {
         $('header').stop().animate({backgroundColor: $.Color('rgb(43, 43, 43, 0)')}, 500);
     }
 });
-$(document).ready(function() {
+jQuery(function($) {
     $(".sw").css("width", window.screen.width - 8); 
     // classe sw possui width do tamanho do monitor do usuário, menos 8px do scrollbar
      
@@ -19,6 +18,8 @@ $(document).ready(function() {
     document.querySelectorAll('body > *').forEach(element => {
         element.classList.add('smooth-scroll');
     });
+    var loading = document.getElementById('loading');
+    loading.style.display = 'none';
 });
 function redirect(link, tipo = 'assign') {
     if(tipo == 'assign')

@@ -25,7 +25,7 @@
             <h2>Como é usado?</h2>
             <div class="infos_sobreProjeto" id="projetoSecao2">
                 <h4>Protótipo</h4>
-                <video autoplay muted loop>
+                <video id="videoPrototipo" autoplay muted loop>
                     <source :src="'assets/videos/prototipo-projeto.mp4'" type="video/mp4"/>
                 </video>
                 <progress id="barraDeProgresso" value="0" max="100"></progress>
@@ -70,9 +70,9 @@
                 scrollTop: $('#projetoSecao3').offset().top - 70
                 }, 1000);
             });
-            let video = document.querySelector('#projetoSecao2 video');
+            let video = document.querySelector('#videoPrototipo');
             let progressBar = document.getElementById('barraDeProgresso');
-
+            
             video.addEventListener('timeupdate', function() {
                 let percent = Math.floor((100 / video.duration) * video.currentTime);
                 progressBar.value = percent;

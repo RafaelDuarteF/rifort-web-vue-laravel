@@ -13,6 +13,9 @@
         <title>RIFORT - {{ $titulo }}</title>
     </head>
     <body style="background: {{ !empty($fundo) ? $fundo : '#141414' }}">
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+        </div>
         @section('header')
             @include('general._layouts.header')
         @show

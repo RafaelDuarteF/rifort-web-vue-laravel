@@ -146,6 +146,13 @@
                             icon: 'error'
                         });
                     }
+                    else if(res == 'noperation') {
+                        Swal.fire({
+                            title: 'Fora de operação.',
+                            text: 'A partir da meia noite, os ônibus encerram suas operações!',
+                            icon: 'warning'
+                        });
+                    }
                     else {
                         if(!this.chegadas) {
                             // Verifica se já foi solicitado anteriormente
