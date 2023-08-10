@@ -31,4 +31,13 @@ class IndexController extends Controller
             return redirect()->route('site.index')->withErrors(['erroContato' => true]);
         }
     }
+    public function enviarContatoAPI(Request $request) {
+        $request->validate($this->contato->rules(), $this->contato->feedback());
+        try {
+            Contato::create($request->all());
+            return true;
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
 }

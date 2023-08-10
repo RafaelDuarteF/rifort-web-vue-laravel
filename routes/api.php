@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/aplicacao/verificarChegadas', [ApplicationController::class, 'obterChegadas'])->name('site.application.verificarChegadas');
+Route::post('/enviarContato', [IndexController::class, 'enviarContatoAPI'])->name('site.index.enviarContatoAPI');

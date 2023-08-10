@@ -13,8 +13,8 @@
             <h2>O que é?</h2>
             <div class="infos_sobreProjeto" id="projetoSecao1">
                 <img alt="Sobre o projeto" :src="$store.state.paths.artsPath + '/bus-stop.png'"/>
-                <span>Nosso projeto consiste em realizar a contagem de passageiros através de um
-                 sensor, usando uma tecnologia que é capaz de saber se o ônibus desejado está com
+                <span>Nosso projeto consiste em realizar a contagem de passageiros através de
+                 sensores, utilizando de uma tecnologia que é capaz de saber se o ônibus desejado está com
                  uma capacidade cheia, média ou vazia. O sensor é um dispositivo capaz de detectar
                  ações de fenômeno físico com interações de um meio, seja pela temperatura, luz
                  ou impedância elétrica, e ele transmitirá um sinal para o dispositivo de controle
