@@ -26,7 +26,7 @@ O sistema deverá:
 
 # Fluxogram Diagram:
 
-![Fluxograma de consulta RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/cfd3d012-0b0a-455f-8b88-8e88e0333ce7)
+![Fluxograma de consulta RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/3621e020-1292-4fc6-9548-8930d5fa2411)
 
 Fluxograma do sistema de consulta RIFORT.
 
