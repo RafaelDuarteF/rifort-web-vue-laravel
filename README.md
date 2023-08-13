@@ -2,23 +2,23 @@
 
 ## Requisitos:
 
-## Funcionais:
-    O sistema deverá:
-    * Consultar a lotação de ônibus específicos de São Paulo
-    * Consultar a previsão de chegada de ônibus específicos de São Paulo
-    * Consultar a localização em tempo real de ônibus específicos de São Paulo
-    * Todas as consultas estarão visíveis ao usuário após sua realização
-    * Para realizar as consultas, usuário deverá informar o número do ônibus, seu sentido e o ponto de parada desejado
-    * É possível solicitar contato ao suporte da RIFORT, informando e-mail, assunto e a mensagem. O mesmo será respondido no e-mail informado
+### Funcionais:
+O sistema deverá:
+* Consultar a lotação de ônibus específicos de São Paulo
+* Consultar a previsão de chegada de ônibus específicos de São Paulo
+* Consultar a localização em tempo real de ônibus específicos de São Paulo
+* Todas as consultas estarão visíveis ao usuário após sua realização
+* Para realizar as consultas, usuário deverá informar o número do ônibus, seu sentido e o ponto de parada desejado
+* É possível solicitar contato ao suporte da RIFORT, informando e-mail, assunto e a mensagem. O mesmo será respondido no e-mail informado
 
-## Não funcionais
+### Não funcionais
 
-    * O sistema usará o MySql com o MySql Workbench para gerenciar o Banco de Dados
-    * O sistema será desenvolvido utilizando:
-        1. Linguagens (programação/marcação/estilização) - Javascript, PHP, HTML, CSS e SQL.
-        2. Compiladores & Servers - Artisan, Vite
-        3. Frameworks - Vue e Laravel
-        4. ORM - Eloquent
+* O sistema usará o MySql com o MySql Workbench para gerenciar o Banco de Dados
+* O sistema será desenvolvido utilizando:
+    1. Linguagens (programação/marcação/estilização) - Javascript, PHP, HTML, CSS e SQL.
+    2. Compiladores & Servers - Artisan, Vite
+    3. Frameworks - Vue e Laravel
+    4. ORM - Eloquent
 
 ## Case of use Diagram:
 
