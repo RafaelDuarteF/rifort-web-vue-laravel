@@ -20,6 +20,14 @@ O sistema deverá:
     3. Frameworks - Vue e Laravel
     4. ORM - Eloquent
 
+## Case of use Diagram:
+
+![Diagrama de caso de uso](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/50b8b661-60b2-4aa7-9b6d-8d64c1e8fb27)
+
+# Fluxogram Diagram:
+
+![Fluxograma de consulta RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/cfd3d012-0b0a-455f-8b88-8e88e0333ce7)
+
 ## Database
 
 ### Model Entity Relashionship
@@ -29,11 +37,3 @@ O sistema deverá:
 ### Class Diagram
 
 ![Diagrama de Classe RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/dafff9b7-125a-467e-a290-225c9995083a)
-
-## Case of use Diagram:
-
-![Diagrama de caso de uso](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/50b8b661-60b2-4aa7-9b6d-8d64c1e8fb27)
-
-# Fluxogram Diagram:
-
-![Fluxograma de consulta RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/cfd3d012-0b0a-455f-8b88-8e88e0333ce7)
