@@ -28,6 +28,8 @@ O sistema deverá:
 
 ![Fluxograma de consulta RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/cfd3d012-0b0a-455f-8b88-8e88e0333ce7)
 
+Fluxograma do sistema de consulta RIFORT.
+
 ## Database
 
 ### Model Entity Relashionship
