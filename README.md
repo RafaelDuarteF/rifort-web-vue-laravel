@@ -20,6 +20,16 @@ O sistema deverá:
     3. Frameworks - Vue e Laravel
     4. ORM - Eloquent
 
+## Database
+
+### Model Entity Relashionship
+
+![MLR Rifort](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/352ee180-d02b-4c81-abf6-1ebf584700da)
+
+### Class Diagram
+
+![Diagrama de Classe RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/dafff9b7-125a-467e-a290-225c9995083a)
+
 ## Case of use Diagram:
 
 ![Diagrama de caso de uso](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/50b8b661-60b2-4aa7-9b6d-8d64c1e8fb27)
