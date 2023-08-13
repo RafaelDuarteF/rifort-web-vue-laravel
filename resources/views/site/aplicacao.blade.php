@@ -13,3 +13,6 @@
 
 @section('footer')
 @endsection
+@section('assets.js')
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6ORxjL9JSXo2VVa9HSoNV-r34dprnXV0" async defer></script>
+@endsection

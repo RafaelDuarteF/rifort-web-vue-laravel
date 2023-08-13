@@ -118,6 +118,22 @@ video {
     margin-bottom: 15px;
 }
 
+#projetoSecao3 button {
+    display: none;
+    width: 60%;
+    height: 60px;
+    border-radius: 20px;
+    background-color: $primary-color;
+    border: none;
+    font-family: "GothamHTF-Book", sans-serif;
+    font-weight: bold;
+    font-size: 17pt;
+}
+#projetoSecao3 button:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
 .infos_sobreProjeto video {
     width: 80%;
     height: auto;
@@ -187,4 +203,14 @@ progress {
     #projetoSecao2 video {
         width: 95%;
     }
+    #projetoSecao3 h2 {
+        text-align: center;
+    }
+    #projetoSecao3 iframe {
+        display: none;
+    }
+    #projetoSecao3 button {
+        display: block;
+    }
+    
 }

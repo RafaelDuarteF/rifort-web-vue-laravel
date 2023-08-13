@@ -52,6 +52,10 @@
     margin-top: 20px;
     margin-bottom: 10px;
 }
+.contatoForm form label::selection {
+    background-color: $secondary-color;
+    color: $background-color;
+}
 .contatoForm form input, .contatoForm form textarea {
     border-radius: 15px;
     border: none;

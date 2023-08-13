@@ -31,6 +31,9 @@
 @if($errors->has('erroContato'))
     @php $erroContato = '1'; @endphp
 @endif
+@if($errors->has('maxContato'))
+    @php $maxContato = '1'; @endphp
+@endif
 
 @section('conteudo')
     <index-component
@@ -50,6 +53,7 @@
         erro_email="{{ $error['email'] ?? null }}"
         erro_assunto="{{ $error['assunto'] ?? null }}"
         erro_mensagem="{{ $error['mensagem'] ?? null }}"
+        erro_max_contato="{{ $maxContato ?? false}}"
     >
         </index-component>
 @endsection

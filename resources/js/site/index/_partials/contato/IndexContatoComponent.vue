@@ -73,6 +73,10 @@ export default {
             type: String,
             required: false,
         },
+        erro_max_contato: {
+            type: String,
+            required: false,
+        }
     },
     mounted() {
         if(this.erro_preenchimento == '1') {
@@ -92,6 +96,13 @@ export default {
                 icon: 'success',
                 title: 'Contato realizado com sucesso!',
                 text: 'Responderemos no E-Mail informado em até 48 horas.',
+            });
+        }
+        else if(this.erro_max_contato == '1') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro!',
+                text: 'Número máximo de envios de contato atingido, tente novamente mais tarde!',
             });
         }
     }

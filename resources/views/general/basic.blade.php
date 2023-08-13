@@ -8,6 +8,10 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.10/dist/sweetalert2.all.min.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"/>
         @vite(['./resources/css/app.scss', './resources/js/app.js'])
         <title>RIFORT - {{ $titulo }}</title>

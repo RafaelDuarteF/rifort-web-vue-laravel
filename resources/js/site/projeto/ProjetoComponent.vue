@@ -45,6 +45,7 @@
                      e valor da RifortBus através do documento seguinte:
                 </span>
                 <iframe src="./assets/IDV.pdf" width="90%" height="900px"></iframe>
+                <button @click="downloadPdf">Download</button>
             </div>
         </div>
     </div>
@@ -78,6 +79,14 @@
                 progressBar.value = percent;
             });
         },
+        methods: {
+            downloadPdf() {
+                var link = document.createElement("a");
+                link.href = "./assets/IDV.pdf";
+                link.download = "IDV.pdf"; // Define o nome do arquivo de download
+                link.click();
+            }
+        }
     }
 </script>
 <style lang="scss">

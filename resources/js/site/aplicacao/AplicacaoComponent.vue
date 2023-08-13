@@ -3,12 +3,12 @@
         <div class="leftAplicacao" v-if="$store.state.paths.artsPath">
             <div class="divImgBus">
                 <img alt="Página principal" class="logoBus" @click="redirect(route_index)" :src="$store.state.paths.artsPath + 'logoheader.png'"/>
-                <img :src="$store.state.paths.artsPath + 'onibus.jpg'" class="imgBus"/>
+                <img alt="Ônibus" :src="$store.state.paths.artsPath + 'onibus.jpg'" class="imgBus"/>
             </div>
             <div class="pesquisa">
                 <form>
                     <label for="linha">Número da linha</label>
-                    <input type="text" id="numLinha" name="numLinha" placeholder="Ex: 1720-10" class="caixa caixa1"/>
+                    <input type="text" id="numLinha" name="numLinha" placeholder="Ex: 1732-10" class="caixa caixa1"/>
                     <label for="linha">Sentido da linha</label>
                     <input type="text" id="linha" name="linha" placeholder="Ex: Vila sabrina" class="caixa caixa2"/>
                     <label for="parada">Ponto de parada</label>
@@ -21,9 +21,7 @@
             </div>
         </div>
         <div class="rightAplicacao">
-            <div class="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3823.282456902198!2d-49.18339678464761!3d-16.612587448036287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935eed0c9fe78fd1%3A0xea07ea56bb53a074!2sR.%20das%20Palmeiras%20-%20Res.%20Aldeia%20do%20Vale%2C%20Goi%C3%A2nia%20-%20GO%2C%2074680-210!5e0!3m2!1spt-BR!2sbr!4v1636306791673!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
-            </div>
+            <div id="map"></div>
             <div class="resLotacao">
                 <div class="part-one">
                     <div class="left-part-one">
@@ -96,10 +94,64 @@
             };
         },
         mounted() {
+            window.addEventListener('load', () => {
+                let location = this.getUserLocation();
+                this.initMap([location?.lat ?? -23.5475000, 0], [location?.lng ?? -46.6361100, 0], false);
+            });
+            
             this.$store.commit('SET_ARTS_PATH', this.arts);
             $(".aplicacaoWrapper").css("display", 'flex')
         },
         methods: {
+            initMap(latitudes, longitudes, marcador = false) {
+                // Coordenadas do local que você deseja exibir
+                var locations = [
+                    { lat: latitudes[0], lng: longitudes[0] },
+                    { lat: latitudes[1], lng: longitudes[1] }
+                ];
+                
+                 // Configurações do mapa
+                var mapOptions = {
+                    center: locations[0],
+                    zoom: marcador == false ? 11 : 15,
+                };
+                
+                // Criação do mapa
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                // Adiciona os marcadores
+                if(marcador != false) {
+                    locations.forEach(location => {
+                        var marker = new google.maps.Marker({
+                            position: location,
+                            map: map,
+                            title: 'Localização do ônibus',
+                            icon: {
+                                url: './assets/arts/marker.png',
+                                scaledSize: new google.maps.Size(50, 50), 
+                            }
+                            
+                        });
+                    });
+                }
+            },
+            async getUserLocation() {
+                return new Promise((resolve, reject) => {
+                    if ("geolocation" in navigator) {
+                    navigator.geolocation.getCurrentPosition(position => {
+                        var userLocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+                        resolve(userLocation);
+                    }, error => {
+                        reject(error);
+                    });
+                    } else {
+                        reject("Geolocalização não suportada.");
+                    }
+                });
+            },
             redirect(route) {
                 location.assign(route);
             },
@@ -119,15 +171,15 @@
                     axios.get(route, { params: { linha: linhaIn, parada: paradaIn, numLinha: numLinhaIn } })
                         .then(response => {
                             retorno = exibir(response.data)
-                            if(retorno == 'interval') {
-                                clearInterval(this.intervalId);
-                                this.intervalId = setInterval(() => {
-                                    this.verificarChegada(route);
-                                }, 10000);
-                            }
-                            else {
-                                clearInterval(this.intervalId);
-                            }
+                            // if(retorno == 'interval') {
+                            //     clearInterval(this.intervalId);
+                            //     this.intervalId = setInterval(() => {
+                            //         this.verificarChegada(route);
+                            //     }, 10000);
+                            // }
+                            // else {
+                            //     clearInterval(this.intervalId);
+                            // }
                             
                         })
                         .catch(errors => {
@@ -193,6 +245,13 @@
                             } else {
                                 this.onibus2 = 'Chegada: ' + chegada2;
                             }
+                            let latitude1 = res?.chegada?.vs?.[0]?.py ?? 0;
+                            let longitude1 = res?.chegada?.vs?.[0]?.px ?? 0;
+                            let latitude2 = res?.chegada?.vs?.[1]?.py ?? 0;
+                            let longitude2 = res?.chegada?.vs?.[1]?.px ?? 0;
+                            let latitudes = [latitude1, latitude2];
+                            let longitudes = [longitude1, longitude2];
+                            this.initMap(latitudes, longitudes, true);
                         }
                         return 'interval';
                     }

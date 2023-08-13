@@ -256,6 +256,14 @@ footer .emailContato {
     opacity: 70%;
 }
 
+span::selection {
+    background-color: $secondary-color;
+    color: $background-color;
+}
+
+h2::selection, h3::selection {
+    background-color: $line-500-color;
+}
 
 @media only screen and (max-width: 800px) {
     .logoHeader img {
@@ -282,7 +290,7 @@ footer .emailContato {
     }
 
     .loginHeader {
-        margin-top: 15px;
+        margin-top: 0px;
     }
 
     footer {
@@ -302,8 +310,11 @@ footer .emailContato {
     }
 
     .menuNav {
-        display: block;
+        display: none;
         text-align: center;
+    }
+    .navContato {
+        margin-top: 10px;
     }
 
 }

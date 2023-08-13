@@ -2,8 +2,8 @@
     <div class="raio"></div>
     <div class="raio raio2"></div>
     <div class="videoFundo">
-        <h2>Um toque de conforto e segurança em cada viagem.</h2>
-        <span>Apoie o projeto RIFORT.</span>
+        <h2 class="animate__animated animate__pulse animate__slower animate__infinite">Um toque de conforto e segurança em cada viagem.</h2>
+        <span class="animate__animated animate__pulse animate__slower animate__infinite">Apoie o projeto RIFORT.</span>
         <video autoplay muted loop>
             <source :src="$store.state.paths.videosPath + '/fundo.mp4'" type="video/mp4"/>
         </video>
@@ -45,6 +45,7 @@
             :old_contato_email="old_contato_email"
             :old_contato_assunto="old_contato_assunto"
             :old_contato_mensagem="old_contato_mensagem"
+            :erro_max_contato="erro_max_contato"
         >
         </index-contato-component>
 
@@ -117,6 +118,10 @@
                 type: String,
                 required: false,
             },
+            erro_max_contato: {
+                type: String,
+                required: false,
+            }
         },
         mounted() {
             this.$store.commit('SET_PARTICIPANTES_PATH', this.participantes);

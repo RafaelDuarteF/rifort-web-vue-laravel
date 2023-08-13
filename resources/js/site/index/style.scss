@@ -21,9 +21,7 @@ video {
     color: $secondary-color;
     font-family: "GothamHTF-Book", sans-serif;
     position: absolute;
-    opacity: 0;
-    transform: translateX(-100px);
-    animation: animacao 2s forwards;
+    opacity: 1;
     text-align: center;
     margin: 0px 20px;
 }
@@ -179,7 +177,7 @@ video {
     }
 
     .videoFundo span {
-        margin-top: 90px;
+        margin-top: 110px;
     }
 
     .videoFundo h2 {
@@ -188,10 +186,6 @@ video {
 
     .videoFundo video {
         height: 100vh;
-    }
-
-    .infosPerfil h3 {
-        margin-left: 0px;
     }
 
     .perfil {

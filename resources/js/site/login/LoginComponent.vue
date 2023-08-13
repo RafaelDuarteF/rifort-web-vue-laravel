@@ -3,7 +3,7 @@
         <video autoplay muted loop>
             <source :src="$store.state.paths.videosPath + '/fundo2.mp4'" type="video/mp4"/>
         </video>
-        <div class="gLogin">
+        <div class="gLogin animate__animated animate__bounceInLeft">
             <div class="card-login">
                 <h1>Login</h1>
                 <form :action="route_logar" id="formLogin" method="POST">
