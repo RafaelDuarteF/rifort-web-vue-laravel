@@ -15,7 +15,7 @@ O sistema deverá:
 
 * O sistema usará o MySql com o MySql Workbench para gerenciar o Banco de Dados
 * O sistema será desenvolvido utilizando:
-    1. Linguagens (programação/marcação/estilização) - Javascript, PHP, HTML, CSS e SQL.
+    1. Linguagens (programação/marcação/estilização) - Javascript, PHP, HTML, SCSS e SQL.
     2. Compiladores & Servers - Artisan, Vite
     3. Frameworks - Vue e Laravel
     4. ORM - Eloquent
