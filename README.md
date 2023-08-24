@@ -1,66 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SISTEMA WEB DA RIFORT BUS
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Requisitos:
 
-## About Laravel
+### Funcionais:
+O sistema deverá:
+* Consultar a lotação de ônibus específicos de São Paulo
+* Consultar a previsão de chegada de ônibus específicos de São Paulo
+* Consultar a localização em tempo real de ônibus específicos de São Paulo
+* Todas as consultas estarão visíveis ao usuário após sua realização
+* Para realizar as consultas, usuário deverá informar o número do ônibus, seu sentido e o ponto de parada desejado
+* É possível solicitar contato ao suporte da RIFORT, informando e-mail, assunto e a mensagem. O mesmo será respondido no e-mail informado
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Não funcionais
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* As requisições para contato deverão possuir limite máximo de 5 envios por sessão;
+* A senha do usuário deverá ser armazenada no banco de dados criptografada;
+* O sistema web deverá solicitar ao usuário acesso a sua localização para exibir no mapa, visando UX;
+* O sistema deverá obter as informações necessárias gerais sobre os ônibus de São Paulo utilizando a API OlhoVivo, da SPTrans;
+* O sistema deverá filtrar e automaticamente excluir solicitações de contato de usuários identificados como maliciosas ou indevidas;
+* O sistema usará o MySql com o MySql Workbench para gerenciar o Banco de Dados;
+* O sistema deverá ser compatível com IOS e Android
+* O sistema será desenvolvido utilizando:
+    1. Linguagens (programação/marcação/estilização) - Javascript, PHP, HTML, SCSS e SQL.
+    2. Compiladores & Servers - Artisan, Vite
+    3. Frameworks - Vue e Laravel
+    4. ORM - Eloquent
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Case of use Diagram:
 
-## Learning Laravel
+![Diagrama de caso de uso](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/50b8b661-60b2-4aa7-9b6d-8d64c1e8fb27)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Fluxogram Diagram:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![Fluxograma de consulta RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/3621e020-1292-4fc6-9548-8930d5fa2411)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Fluxograma do sistema de consulta RIFORT.
 
-## Laravel Sponsors
+## Database
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Model Entity Relashionship
 
-### Premium Partners
+![MLR Rifort](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/352ee180-d02b-4c81-abf6-1ebf584700da)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Class Diagram
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![Diagrama de Classe RIFORT](https://github.com/RafaelDuarteF/rifort-web-vue-laravel/assets/103393497/dafff9b7-125a-467e-a290-225c9995083a)
