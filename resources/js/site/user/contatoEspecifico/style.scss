@@ -1,0 +1,114 @@
+@import '../../../../css/theme.scss';
+
+#contatoEspWrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.visuContatoEsp {
+    width: 90%;
+    margin-top: 20px;
+    flex-direction: column;
+    display: flex;
+}
+
+.titleContatoEsp {
+    margin-top: 80px;
+    padding: 30px 0px;
+    width: 90%;
+    color: $thirty-color;
+    border-bottom: 1px solid $line-500-color;
+    font-size: 16.5pt;
+}
+
+.titleResps {
+    margin-top: 10px;
+}
+
+.visuAssunto {
+    color: $thirty-color;
+    padding: 10px 0px;
+}
+
+.divMensagem {
+    border-radius: 20px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+    background-color: $line-500-color;
+}
+
+.visuMensagem {
+    color: $thirty-color;
+    opacity: 70%;
+    margin-left: 10px;
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.respsAutomaticas {
+    height: 50%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.resps {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: $thirty-color;
+    border-radius: 10px;
+}
+
+.resps:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.btnContato {
+    width: 90%;
+    padding: 20px 0px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 14.5pt;
+}
+
+.btnContato:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.respContato {
+    margin-bottom: 40px;
+}
+
+.btnResponder {
+    background-color: $primary-color;
+    color: $background-color;
+
+}
+
+.btnExcluir {
+    background-color: #EF4136;
+    color: $thirty-color;
+    margin-bottom: 40px;
+}
+
+.inputResposta {
+    resize: none;
+    color: $thirty-color;
+    font-size: 13pt;
+}
+
+.btnRespostaAuto {
+    background-color: $thirty-color;
+}

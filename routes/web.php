@@ -25,5 +25,9 @@ Route::get('/projeto', [ProjetoController::class, 'index'])->name('site.projeto'
 Route::get('/aplicacao', [ApplicationController::class, 'index'])->name('site.application');
 Route::get('/aplicacao/verificarChegadas', [ApplicationController::class, 'obterChegadas'])->name('site.application.verificarChegadas');
 Route::group(['prefix' => 'user', 'middleware' => 'checkauth'], function () {
-    Route::get('/index', [UserController::class, 'index'])->name('user.index');
+    Route::get('/contatos/visualizar', [UserController::class, 'visualizarContatos'])->name('user.visualizarContatos');
+    Route::post('/contatos/deletar', [UserController::class, 'deletarContatos'])->name('user.deletarContato');
+    Route::get('/contato/{id?}', [UserController::class, 'verificarContato'])->name('user.verificarContato');
+    Route::post('/contato/enviar', [UserController::class, 'enviarContato'])->name('user.enviarContato');
+    Route::post('/enviarEmail', [UserController::class, 'enviarEmail'])->name('user.enviarEmail');
 });

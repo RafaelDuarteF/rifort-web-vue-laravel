@@ -34,7 +34,7 @@ class LoginController extends Controller
             if ($user && Hash::check($request->password, $user->password)) {
                 // usuário existe e senha está correta
                 Auth::login($user); // iniciar a sessão para o usuário
-                return redirect()->route('user.index');
+                return redirect()->route('user.visualizarContatos');
             } else {
                 // usuário não existe ou senha está incorreta
                 return redirect()->back()->withErrors(['erroAutenticacao' => 'As credenciais informadas estão incorretas.']);

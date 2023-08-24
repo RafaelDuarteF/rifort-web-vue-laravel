@@ -21,9 +21,6 @@ video {
     color: $secondary-color;
     font-family: "GothamHTF-Book", sans-serif;
     position: absolute;
-    opacity: 0;
-    transform: translateX(-100px);
-    animation: animacao 2s forwards;
     text-align: center;
     margin: 0px 20px;
 }
@@ -129,6 +126,7 @@ video {
     font-weight: bold;
     font-size: 17pt;
 }
+
 #projetoSecao3 button:hover {
     cursor: pointer;
     opacity: 70%;
@@ -203,14 +201,17 @@ progress {
     #projetoSecao2 video {
         width: 95%;
     }
+
     #projetoSecao3 h2 {
         text-align: center;
     }
+
     #projetoSecao3 iframe {
         display: none;
     }
+
     #projetoSecao3 button {
         display: block;
     }
-    
+
 }

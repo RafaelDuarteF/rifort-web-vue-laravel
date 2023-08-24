@@ -256,6 +256,12 @@ footer .emailContato {
     opacity: 70%;
 }
 
+.perfilHeader {
+    height: 50px;
+    right: 20px;
+    position: fixed;
+}
+
 span::selection {
     background-color: $secondary-color;
     color: $background-color;

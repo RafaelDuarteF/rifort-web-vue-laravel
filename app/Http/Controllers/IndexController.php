@@ -45,7 +45,6 @@ class IndexController extends Controller
         $contatosEnv = isset($_SESSION['contatosEnv']) ? $_SESSION['contatosEnv'] : 0;
         $_SESSION['contatosEnv'] = $contatosEnv;
         if($contatosEnv <= 5) {
-            $request->validate($this->contato->rules(), $this->contato->feedback());
             try {
                 Contato::create($request->all());
                 $_SESSION['contatosEnv'] = $_SESSION['contatosEnv'] + 1;

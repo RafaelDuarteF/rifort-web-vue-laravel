@@ -44,5 +44,12 @@ app.component('login-component', LoginComponent);
 import AplicacaoComponent from './site/aplicacao/AplicacaoComponent.vue';
 app.component('aplicacao-component', AplicacaoComponent);
 
+// User Components
+
+import UserContatosComponent from './site/user/UserContatosComponent.vue';
+import UserContatoComponent from './site/user/contatoEspecifico/UserContatoComponent.vue';
+app.component('user-contatos-component', UserContatosComponent);
+app.component('user-contato-component', UserContatoComponent);
+
 app.use(store);
 app.mount("#app");

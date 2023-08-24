@@ -122,16 +122,18 @@
                 // Adiciona os marcadores
                 if(marcador != false) {
                     locations.forEach(location => {
-                        var marker = new google.maps.Marker({
-                            position: location,
-                            map: map,
-                            title: 'Localização do ônibus',
-                            icon: {
-                                url: './assets/arts/marker.png',
-                                scaledSize: new google.maps.Size(50, 50), 
-                            }
-                            
-                        });
+                        if(location.lat != 0 || location.long != 0) {
+                            var marker = new google.maps.Marker({
+                                position: location,
+                                map: map,
+                                title: 'Localização do ônibus',
+                                icon: {
+                                    url: './assets/arts/marker.png',
+                                    scaledSize: new google.maps.Size(50, 50), 
+                                }
+                                
+                            });
+                        }
                     });
                 }
             },
@@ -171,15 +173,15 @@
                     axios.get(route, { params: { linha: linhaIn, parada: paradaIn, numLinha: numLinhaIn } })
                         .then(response => {
                             retorno = exibir(response.data)
-                            // if(retorno == 'interval') {
-                            //     clearInterval(this.intervalId);
-                            //     this.intervalId = setInterval(() => {
-                            //         this.verificarChegada(route);
-                            //     }, 10000);
-                            // }
-                            // else {
-                            //     clearInterval(this.intervalId);
-                            // }
+                            if(retorno == 'interval') {
+                                clearInterval(this.intervalId);
+                                this.intervalId = setInterval(() => {
+                                    this.verificarChegada(route);
+                                }, 10000);
+                            }
+                            else {
+                                clearInterval(this.intervalId);
+                            }
                             
                         })
                         .catch(errors => {
@@ -236,6 +238,7 @@
                             $('.primeiroOnibus').css('display', 'none');
                             $('.segundoOnibus').css('display', 'none');
                             $('.semInfos').css('display', 'flex');
+                            this.initMap([-23.5475000, 0], [-46.6361100, 0], false);
                         }
                         else {
                             this.onibus1 = 'Chegada: ' + chegada1;

@@ -2,8 +2,8 @@
     <div class="raio"></div>
     <div class="raio raio2"></div>
     <div class="projetoFundo" v-if="$store.state.paths.videosPath">
-        <h2>Tecnologia e conforto em seu transporte.</h2>
-        <span>Confira todas as informações sobre nosso projeto.</span>
+        <h2 class="animate__animated animate__pulse animate__slower animate__infinite">Tecnologia e conforto em seu transporte.</h2>
+        <span class="animate__animated animate__pulse animate__slower animate__infinite">Confira todas as informações sobre nosso projeto.</span>
         <video autoplay muted loop>
             <source :src="$store.state.paths.videosPath + '/projeto-fundo.mp4'" type="video/mp4"/>
         </video>

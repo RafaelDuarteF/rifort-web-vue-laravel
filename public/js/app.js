@@ -2,9 +2,9 @@
 $(window).scroll(function() {
     let scroll = $(window).scrollTop();
     if(scroll > 100) {
-        $('header').stop().animate({backgroundColor: $.Color('rgba(40, 40, 40, 0.9)')}, 500);
+        $('.header').stop().animate({backgroundColor: $.Color('rgba(40, 40, 40, 0.9)')}, 500);
     } else {
-        $('header').stop().animate({backgroundColor: $.Color('rgb(43, 43, 43, 0)')}, 500);
+        $('.header').stop().animate({backgroundColor: $.Color('rgb(43, 43, 43, 0)')}, 500);
     }
 });
 jQuery(function($) {

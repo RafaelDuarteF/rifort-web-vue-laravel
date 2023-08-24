@@ -1,7 +1,4 @@
 @extends('general.basic')
-@section('assets.css')
-    <link href="{{ asset($cssPath . 'login.css')}}" type="text/css" rel="stylesheet"/>
-@endsection
 
 @section('header')
 @endsection
